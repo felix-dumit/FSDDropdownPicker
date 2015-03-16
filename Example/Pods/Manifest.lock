@@ -4,7 +4,7 @@ PODS:
     - Expecta
     - FBSnapshotTestCase
   - FBSnapshotTestCase (1.5)
-  - FSDDropdownPicker (0.1.0)
+  - FSDDropdownPicker (0.2.0)
   - Specta (0.4.0)
 
 DEPENDENCIES:
@@ -22,7 +22,7 @@ SPEC CHECKSUMS:
   Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
   Expecta+Snapshots: 4a56b9411c6ed156987072e52c39de67d864015a
   FBSnapshotTestCase: e2914fbaabccea1dcc773d6a16b1c24540642488
-  FSDDropdownPicker: 8521cd36821059f29c71a75fc976202b10ea491f
+  FSDDropdownPicker: fa613a8cb1965fa7025009c45a7664999c6b996c
   Specta: 1df326d6ec48603c77f507a0ab1f89ad2df1c582
 
 COCOAPODS: 0.35.0
