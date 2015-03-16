@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'FSDDropdownPicker', :exclusive => true do
+  pod "FSDDropdownPicker", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "FSDDropdownPicker", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
