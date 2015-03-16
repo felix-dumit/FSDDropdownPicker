@@ -9,20 +9,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "FSDDropdownPicker"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of FSDDropdownPicker."
+  s.version          = "0.2.0"
+  s.summary          = "A dropdown picker component displayed from a UINavigationItem."
   s.description      = <<-DESC
-                       An optional longer description of FSDDropdownPicker
+                       A DropDownList displayed from a UINavigationItem.
+                       * Set the items name and icons and the button will change accordingly
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FSDDropdownPicker"
+  s.homepage         = "https://github.com/felix-dumit/FSDDropdownPicker"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Felix Dumit" => "felix.dumit@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FSDDropdownPicker.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/felix-dumit/FSDDropdownPicker.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/felix_dumit'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
