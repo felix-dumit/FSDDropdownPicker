@@ -7,7 +7,7 @@
 
 ##Example
 
-![Example](http://gifyu.com/images/temp.gif)
+![Example](http://gifyu.com/images/temp2.gif)
 
 ## Usage
 
@@ -28,6 +28,8 @@ Or you can use a convenience method to directly add the picker to the right of a
 ```objc 
 FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
 ```
+
+The dropdown picker will dismiss if tapped outside or tapped the dropdown button.
 
 ###FSDDropdownPickerDelegate
 > The delegate can respond to the following events:
@@ -69,15 +71,16 @@ picker.delegate = self;
 ```
 ## Installation
 
-> FSDDropdownPicker is available through [CocoaPods](http://cocoapods.org). To install
+ FSDDropdownPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
     pod "FSDDropdownPicker"
  
- > Or to view the example project:
- ```
- 	pod try "FSDDropdownPicker" 
- ```
+  Or to view the example project:
+    ```
+    pod try "FSDDropdownPicker"
+    ```
+
  
  Pull requests or any suggestions are **welcome**
 
