@@ -11,6 +11,9 @@
 
 @class UIImage;
 
+/**
+ *  Object added to the FSDDropdownPicker must conform to this protocol
+ */
 @protocol FSDPickerItemProtocol <NSObject>
 
 - (NSString *)name;

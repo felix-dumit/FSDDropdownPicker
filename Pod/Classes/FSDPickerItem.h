@@ -16,8 +16,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UIImage *image;
 
-
 - (instancetype)initWithName:(NSString *)name andImage:(UIImage *)image;
-
 
 @end

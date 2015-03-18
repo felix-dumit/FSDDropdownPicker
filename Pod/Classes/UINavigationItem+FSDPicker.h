@@ -11,6 +11,13 @@
 
 @interface UINavigationItem (FSDPicker)
 
+/**
+ *  Adds a dropdown picker to the navigation item
+ *
+ *  @param options the array of options to be displayed
+ *
+ *  @return FSDDropdown picker instance
+ */
 - (FSDDropdownPicker *)addDropdownPickerWithOptions:(NSArray *)options;
 
 @end

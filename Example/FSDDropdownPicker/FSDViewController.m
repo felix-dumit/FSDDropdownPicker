@@ -36,8 +36,6 @@
     item3.image = [UIImage imageNamed:@"jp"];
     item3.coordinate = CLLocationCoordinate2DMake(35.6833, 139.7667);
     
-    
-    
     FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
     picker.delegate = self;
     picker.displaysImageInList = YES;
