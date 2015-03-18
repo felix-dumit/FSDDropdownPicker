@@ -21,9 +21,7 @@ FSDPickerItem* item1 = [[FSDPickerItem alloc] initWithName:@"name" andImage:[UII
 ...    
 FSDDropdownPicker *picker = [[FSDDropdownPicker alloc] initWithOptions:@[item1]];    
 ```
-
-Or you can use a convenience method to directly add the picker to the right of a navigation bar: 
-
+You will then have to add it to your view manually. You can alternatively use a convenience method to directly add the picker to the right of a navigation bar: 
 
 ```objc 
 FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
