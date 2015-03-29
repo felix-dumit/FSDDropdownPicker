@@ -80,7 +80,6 @@
         _tableView.separatorStyle = self.listSeparator;
         _tableView.rowHeight = self.rowHeight;
         _tableView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
-        [[self navigationBar].superview insertSubview:_tableView belowSubview:[self navigationBar]];
         
         [self hideDropdownAnimated:NO];
         
@@ -91,6 +90,9 @@
         self.tableView.layer.cornerRadius = 2.0f;
         self.tableView.layer.shadowOpacity = 0.3f;
         self.tableView.layer.shadowPath = shadowPath.CGPath;
+    }
+    if (!_tableView.superview) {
+        [[self navigationBar].superview insertSubview:_tableView belowSubview:[self navigationBar]];
     }
     return _tableView;
 }
