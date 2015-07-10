@@ -47,6 +47,11 @@
 @property (assign, nonatomic) UITableViewCellSeparatorStyle listSeparator;
 
 /**
+ *  The array of options id<FSDPickerItemProtocol> to be selected
+ */
+@property (strong, nonatomic, readonly) NSArray *options;
+
+/**
  *  Initialize a FSDDropdownpicker instance given a list of items to display
  *
  *  @param options array containing id<FSDPickerItemProtocol> items to be displayed
