@@ -25,18 +25,11 @@
 
 
 - (instancetype)initWithOptions:(NSArray *)options {
-    //    UIImage *buttonImage = [UIImage imageNamed:@"icon_calendar"];
-    //    self.actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    //    [self.actionButton setImage:buttonImage forState:UIControlStateNormal];
-    //    self.actionButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-    //    if(self = [super initWithCustomView:self.actionButton]){
-    //        [self.actionButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside;
     id <FSDPickerItemProtocol> firstItem = [options firstObject];
     UIImage *buttonImage = [firstItem image];
     UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [actionButton setImage:buttonImage forState:UIControlStateNormal];
     actionButton.frame = CGRectMake(0.0, 0.0, 44, 44); //buttonImage.size.width, buttonImage.size.height);
-    
     
     if (self = [super initWithCustomView:actionButton]) {
         [actionButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -45,7 +38,7 @@
         
         self.options = options;
         _isDropped = NO;
-        self.selectedOption = [options firstObject];
+        self.selectedOption = firstItem;
         
         self.displaysImageInList = NO;
         
@@ -55,12 +48,8 @@
         
         self.listSeparator = UITableViewCellSeparatorStyleNone;
     }
+    
     return self;
-}
-
-- (void)dealloc {
-    self.tableView.delegate = nil;
-    self.tableView.dataSource = nil;
 }
 
 - (UINavigationBar *)navigationBar {
@@ -91,9 +80,11 @@
         self.tableView.layer.shadowOpacity = 0.3f;
         self.tableView.layer.shadowPath = shadowPath.CGPath;
     }
+    
     if (!_tableView.superview) {
         [[self navigationBar].superview insertSubview:_tableView belowSubview:[self navigationBar]];
     }
+    
     return _tableView;
 }
 
@@ -121,10 +112,10 @@
 
 - (void)toggleDropdown {
     _isDropped = !_isDropped;
+    
     if (self.isDropped) {
         [self showDropdownAnimated:YES];
-    }
-    else {
+    } else {
         [self hideDropdownAnimated:YES];
     }
 }
@@ -147,11 +138,11 @@
          
                          completion: ^(BOOL finished) {
                          }];
-    }
-    else {
+    } else {
         self.tableView.frame = self.tableFrame;
         //        self.frame = self.originalFrame;
     }
+    
     [self.tableView.superview insertSubview:self.tapOutView belowSubview:self.tableView];
 }
 
@@ -175,11 +166,11 @@
                          completion: ^(BOOL finished) {
                              self.tableView.hidden = YES;
                          }];
-    }
-    else {
+    } else {
         self.tableView.frame = frame;
         self.tableView.hidden = YES;
     }
+    
     [self.tapOutView removeFromSuperview];
     self.tapOutView = nil;
 }
@@ -195,6 +186,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"dropCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.textLabel.font = [UIFont systemFontOfSize:self.rowHeight / 2.3];
@@ -203,14 +195,15 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
+    
     id <FSDPickerItemProtocol> item = [self.options objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [item name];
+    
     if (self.displaysImageInList) {
         cell.imageView.image = [item image];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    }
-    else {
+    } else {
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     
@@ -242,6 +235,7 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOutTapped:)];
         [_tapOutView addGestureRecognizer:tap];
     }
+    
     return _tapOutView;
 }
 
