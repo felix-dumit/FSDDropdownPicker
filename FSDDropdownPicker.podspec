@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FSDDropdownPicker"
-  s.version          = "0.2.1"
+  s.version          = "0.2.2"
   s.summary          = "A dropdown picker component displayed from a UINavigationItem."
   s.description      = <<-DESC
                        A DropDownList displayed from a UINavigationItem.
@@ -27,9 +27,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'FSDDropdownPicker' => ['Pod/Assets/*.png']
-  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
