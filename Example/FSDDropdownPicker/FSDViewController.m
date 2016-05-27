@@ -7,9 +7,10 @@
 //
 
 #import "FSDViewController.h"
-#import <UINavigationItem+FSDPicker.h>
 #import "LocationItem.h"
 #import <MapKit/MapKit.h>
+@import FlagKit;
+@import FSDDropdownPicker;
 
 @interface FSDViewController () <FSDDropdownPickerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -23,17 +24,17 @@
     
     LocationItem *item1 = [[LocationItem alloc] init];
     item1.name = @"Brasil";
-    item1.image = [UIImage imageNamed:@"br"];
+    item1.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"BR"];
     item1.coordinate = CLLocationCoordinate2DMake(-15.7833, -47.8667);
     
     LocationItem *item2 = [[LocationItem alloc] init];
     item2.name = @"USA";
-    item2.image = [UIImage imageNamed:@"us"];
+    item2.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"US"];
     item2.coordinate = CLLocationCoordinate2DMake(38.8833, -77.0167);
     
     LocationItem *item3 = [[LocationItem alloc] init];
     item3.name = @"Japan";
-    item3.image = [UIImage imageNamed:@"jp"];
+    item3.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"JP"];
     item3.coordinate = CLLocationCoordinate2DMake(35.6833, 139.7667);
     
     FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];

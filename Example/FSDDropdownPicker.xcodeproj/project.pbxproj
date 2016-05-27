@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A1B72816AEB2527FC08591F /* libPods-FSDDropdownPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFD75B776AD6A64FCC63553 /* libPods-FSDDropdownPicker.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,11 +19,11 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		D5B41E331AB788AB000F7153 /* LocationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B41E321AB788AB000F7153 /* LocationItem.m */; };
 		D5B41E351AB788CB000F7153 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B41E341AB788CB000F7153 /* MapKit.framework */; };
+		E13BD5535841AFFE964353CA /* Pods_FSDDropdownPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD88C7113D47D23DA994FC7 /* Pods_FSDDropdownPicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089A39324CC36762042C4075 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC2DFDE98F18BDBC4D1C50F /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		128697FD7C7F8C1AE2687F19 /* Pods-FSDDropdownPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSDDropdownPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* FSDDropdownPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSDDropdownPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -41,11 +40,9 @@
 		6003F5A6195388D20070C39A /* FSDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSDViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6BB3C973407008723A163B71 /* Pods-FSDDropdownPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSDDropdownPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.release.xcconfig"; sourceTree = "<group>"; };
-		797F3ADD855C89B73B8F88E7 /* Pods-FSDDropdownPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSDDropdownPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.debug.xcconfig"; sourceTree = "<group>"; };
-		9BFD75B776AD6A64FCC63553 /* libPods-FSDDropdownPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FSDDropdownPicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2AAC368FEF5000E551DC76 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A216B3DD8933B5ED6B65A7B1 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABD88C7113D47D23DA994FC7 /* Pods_FSDDropdownPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSDDropdownPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D437CF6EF6E603EA2D058A77 /* Pods-FSDDropdownPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSDDropdownPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.release.xcconfig"; sourceTree = "<group>"; };
 		D5B41E311AB788AB000F7153 /* LocationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationItem.h; sourceTree = "<group>"; };
 		D5B41E321AB788AB000F7153 /* LocationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationItem.m; sourceTree = "<group>"; };
 		D5B41E341AB788CB000F7153 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -62,7 +59,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				4A1B72816AEB2527FC08591F /* libPods-FSDDropdownPicker.a in Frameworks */,
+				E13BD5535841AFFE964353CA /* Pods_FSDDropdownPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +73,7 @@
 				6003F593195388D20070C39A /* FSDDropdownPicker */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				FA7EE09EC5FA0804B2C42417 /* Pods */,
+				F19752B789C40A1DB382FDE7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,8 +93,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				9BFD75B776AD6A64FCC63553 /* libPods-FSDDropdownPicker.a */,
-				089A39324CC36762042C4075 /* libPods-Tests.a */,
+				ABD88C7113D47D23DA994FC7 /* Pods_FSDDropdownPicker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,13 +136,11 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		FA7EE09EC5FA0804B2C42417 /* Pods */ = {
+		F19752B789C40A1DB382FDE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				797F3ADD855C89B73B8F88E7 /* Pods-FSDDropdownPicker.debug.xcconfig */,
-				6BB3C973407008723A163B71 /* Pods-FSDDropdownPicker.release.xcconfig */,
-				A216B3DD8933B5ED6B65A7B1 /* Pods-Tests.debug.xcconfig */,
-				2EC2DFDE98F18BDBC4D1C50F /* Pods-Tests.release.xcconfig */,
+				128697FD7C7F8C1AE2687F19 /* Pods-FSDDropdownPicker.debug.xcconfig */,
+				D437CF6EF6E603EA2D058A77 /* Pods-FSDDropdownPicker.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -158,11 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */;
 			buildPhases = (
-				3A0452ADE6610694D81A3EB4 /* Check Pods Manifest.lock */,
+				06B08EB64C8F052CEA188FD8 /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				5A832178979E650BD229DEFE /* Copy Pods Resources */,
+				EC956E9BB96A529343FBB622 /* 📦 Embed Pods Frameworks */,
+				23310ABB69A679688B6171A8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FSD;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Felix Dumit";
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "FSDDropdownPicker" */;
@@ -216,14 +211,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A0452ADE6610694D81A3EB4 /* Check Pods Manifest.lock */ = {
+		06B08EB64C8F052CEA188FD8 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,19 +226,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5A832178979E650BD229DEFE /* Copy Pods Resources */ = {
+		23310ABB69A679688B6171A8 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC956E9BB96A529343FBB622 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -308,6 +318,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -322,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -364,13 +375,14 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 797F3ADD855C89B73B8F88E7 /* Pods-FSDDropdownPicker.debug.xcconfig */;
+			baseConfigurationReference = 128697FD7C7F8C1AE2687F19 /* Pods-FSDDropdownPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FSDDropdownPicker/FSDDropdownPicker-Prefix.pch";
 				INFOPLIST_FILE = "FSDDropdownPicker/FSDDropdownPicker-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,13 +390,14 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BB3C973407008723A163B71 /* Pods-FSDDropdownPicker.release.xcconfig */;
+			baseConfigurationReference = D437CF6EF6E603EA2D058A77 /* Pods-FSDDropdownPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FSDDropdownPicker/FSDDropdownPicker-Prefix.pch";
 				INFOPLIST_FILE = "FSDDropdownPicker/FSDDropdownPicker-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -46,6 +46,12 @@
  */
 @property (assign, nonatomic) UITableViewCellSeparatorStyle listSeparator;
 
+
+/**
+ *  The text alignment of the labels in the dropdown
+ */
+@property (assign, nonatomic) NSTextAlignment labelTextAlignment;
+
 /**
  *  The array of options id<FSDPickerItemProtocol> to be selected
  */

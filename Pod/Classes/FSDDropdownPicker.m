@@ -38,6 +38,7 @@
         
         self.options = options;
         _isDropped = NO;
+        _labelTextAlignment = NSTextAlignmentNatural;
         self.selectedOption = firstItem;
         
         self.displaysImageInList = NO;
@@ -207,6 +208,11 @@
     
     if (self.displaysImageInList) {
         cell.imageView.image = [item image];
+    }
+    
+    if(self.labelTextAlignment != NSTextAlignmentNatural) {
+        cell.textLabel.textAlignment = self.labelTextAlignment;
+    } else if(self.displaysImageInList) {
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
     } else {
         cell.textLabel.textAlignment = NSTextAlignmentCenter;

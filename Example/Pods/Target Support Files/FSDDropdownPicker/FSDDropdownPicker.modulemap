@@ -1,0 +1,6 @@
+framework module FSDDropdownPicker {
+  umbrella header "FSDDropdownPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
