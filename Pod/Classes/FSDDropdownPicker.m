@@ -60,13 +60,16 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         CGRect navFrame = [self navigationBar].frame;
-        self.tableFrame = CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame), CGRectGetWidth(navFrame), self.options.count * self.rowHeight);
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+        BOOL greaterThanScreenSize = self.options.count * self.rowHeight > screenHeight - CGRectGetMaxY(navFrame);
+        
+        self.tableFrame = CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame), CGRectGetWidth(navFrame), MIN(screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight));
         
         _tableView = [[UITableView alloc] initWithFrame:self.tableFrame];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.allowsSelection = YES;
-        _tableView.scrollEnabled = NO;
+        _tableView.scrollEnabled = greaterThanScreenSize;
         _tableView.separatorStyle = self.listSeparator;
         _tableView.rowHeight = self.rowHeight;
         _tableView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
