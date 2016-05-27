@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FSDDropdownPicker"
-  s.version          = "0.2.3"
+  s.version          = "0.2.4"
   s.summary          = "A dropdown picker component displayed from a UINavigationItem."
   s.description      = <<-DESC
                        A DropDownList displayed from a UINavigationItem.
