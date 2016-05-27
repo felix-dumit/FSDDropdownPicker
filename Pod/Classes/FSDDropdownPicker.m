@@ -122,7 +122,9 @@
 
 - (void)showDropdownAnimated:(BOOL)animated {
     _isDropped = YES;
-    [self.delegate dropdownPicker:self didDropDown:YES];
+    if([self.delegate respondsToSelector:@selector(dropdownPicker:didDropDown:)]){
+        [self.delegate dropdownPicker:self didDropDown:YES];
+    }
     
     self.tableView.hidden = NO;
     
@@ -148,7 +150,10 @@
 
 - (void)hideDropdownAnimated:(BOOL)animated {
     _isDropped = NO;
-    [self.delegate dropdownPicker:self didDropDown:NO];
+    if([self.delegate respondsToSelector:@selector(dropdownPicker:didDropDown:)]){
+        [self.delegate dropdownPicker:self didDropDown:NO];
+    }
+    
     
     CGRect frame = self.tableFrame;
     frame.origin.y -= CGRectGetHeight(self.tableView.bounds) + 5;
