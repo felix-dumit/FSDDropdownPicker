@@ -117,7 +117,7 @@
 - (void)toggleDropdown {
     _isDropped = !_isDropped;
     
-    if (self.isDropped) {
+    if (_isDropped) {
         [self showDropdownAnimated:YES];
     } else {
         [self hideDropdownAnimated:YES];
@@ -125,7 +125,6 @@
 }
 
 - (void)showDropdownAnimated:(BOOL)animated {
-    _isDropped = YES;
     if([self.delegate respondsToSelector:@selector(dropdownPicker:didDropDown:)]){
         [self.delegate dropdownPicker:self didDropDown:YES];
     }
@@ -150,10 +149,11 @@
     }
     
     [self.tableView.superview insertSubview:self.tapOutView belowSubview:self.tableView];
+    
+    _isDropped = YES;
 }
 
 - (void)hideDropdownAnimated:(BOOL)animated {
-    _isDropped = NO;
     if([self.delegate respondsToSelector:@selector(dropdownPicker:didDropDown:)]){
         [self.delegate dropdownPicker:self didDropDown:NO];
     }
@@ -182,6 +182,8 @@
     
     [self.tapOutView removeFromSuperview];
     self.tapOutView = nil;
+    
+    _isDropped = NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
