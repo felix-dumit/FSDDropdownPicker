@@ -42,6 +42,11 @@
 
 
 /**
+ *  Color of the dropdown view
+ */
+@property (strong, nonatomic) UIColor* dropdownBackgroundColor;
+
+/**
  *  The list separator style for the picker items
  */
 @property (assign, nonatomic) UITableViewCellSeparatorStyle listSeparator;

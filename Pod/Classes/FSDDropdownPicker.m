@@ -39,6 +39,7 @@
         self.options = options;
         _isDropped = NO;
         _labelTextAlignment = NSTextAlignmentNatural;
+        _dropdownBackgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
         self.selectedOption = firstItem;
         
         self.displaysImageInList = NO;
@@ -72,7 +73,7 @@
         _tableView.scrollEnabled = greaterThanScreenSize;
         _tableView.separatorStyle = self.listSeparator;
         _tableView.rowHeight = self.rowHeight;
-        _tableView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
+        _tableView.backgroundColor = self.dropdownBackgroundColor;
         
         [self hideDropdownAnimated:NO];
         
