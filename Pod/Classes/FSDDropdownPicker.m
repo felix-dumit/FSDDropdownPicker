@@ -54,6 +54,11 @@
     return self;
 }
 
+-(void)dealloc {
+    [_tableView removeFromSuperview];
+    [_tapOutView removeFromSuperview];
+}
+
 - (UINavigationBar *)navigationBar {
     return (UINavigationBar *)[self.customView superview];
 }
