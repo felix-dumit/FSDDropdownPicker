@@ -239,9 +239,7 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, self.headerHeight)];
-    view.backgroundColor = self.dropdownBackgroundColor;
-    return view;
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, self.headerHeight)];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
