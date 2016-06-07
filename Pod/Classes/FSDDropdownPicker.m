@@ -13,6 +13,7 @@
 
 @property (assign, nonatomic) CGRect originalFrame;
 @property (assign, nonatomic) CGRect tableFrame;
+@property (assign, nonatomic) CGFloat headerHeight;
 @property (strong, nonatomic) NSArray *options;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIVisualEffectView *bluredEffectView;
@@ -47,6 +48,7 @@
         self.tapOutView = nil;
         
         self.rowHeight = 44.0f;
+        self.headerHeight = 20.0f;
         
         self.listSeparator = UITableViewCellSeparatorStyleNone;
     }
@@ -69,7 +71,7 @@
         CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
         BOOL greaterThanScreenSize = self.options.count * self.rowHeight > screenHeight - CGRectGetMaxY(navFrame);
         
-        self.tableFrame = CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame), CGRectGetWidth(navFrame), MIN(screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight));
+        self.tableFrame = CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame) - self.headerHeight, CGRectGetWidth(navFrame), MIN(screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight) + self.headerHeight);
         
         _tableView = [[UITableView alloc] initWithFrame:self.tableFrame];
         _tableView.delegate = self;
@@ -230,6 +232,16 @@
     }
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return self.headerHeight;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, self.headerHeight)];
+    view.backgroundColor = self.dropdownBackgroundColor;
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
