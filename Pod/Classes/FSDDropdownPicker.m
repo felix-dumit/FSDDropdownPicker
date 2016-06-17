@@ -150,6 +150,8 @@
                          }
          
                          completion: ^(BOOL finished) {
+                             NSIndexPath* ip = [NSIndexPath indexPathForRow:[self.options indexOfObject:self.selectedOption] inSection:0];
+                             [self.tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionNone];
                          }];
     } else {
         self.tableView.frame = self.tableFrame;
@@ -211,7 +213,7 @@
         cell.textLabel.font = [UIFont systemFontOfSize:self.rowHeight / 2.3];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     
