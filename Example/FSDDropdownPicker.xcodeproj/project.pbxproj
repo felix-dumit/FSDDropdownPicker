@@ -152,12 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */;
 			buildPhases = (
-				06B08EB64C8F052CEA188FD8 /* 📦 Check Pods Manifest.lock */,
+				06B08EB64C8F052CEA188FD8 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				EC956E9BB96A529343FBB622 /* 📦 Embed Pods Frameworks */,
-				23310ABB69A679688B6171A8 /* 📦 Copy Pods Resources */,
+				EC956E9BB96A529343FBB622 /* [CP] Embed Pods Frameworks */,
+				23310ABB69A679688B6171A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,14 +211,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06B08EB64C8F052CEA188FD8 /* 📦 Check Pods Manifest.lock */ = {
+		06B08EB64C8F052CEA188FD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,14 +226,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		23310ABB69A679688B6171A8 /* 📦 Copy Pods Resources */ = {
+		23310ABB69A679688B6171A8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +241,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC956E9BB96A529343FBB622 /* 📦 Embed Pods Frameworks */ = {
+		EC956E9BB96A529343FBB622 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
