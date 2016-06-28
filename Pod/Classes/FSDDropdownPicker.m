@@ -12,7 +12,6 @@
 @interface FSDDropdownPicker () <UITableViewDelegate, UITableViewDataSource>
 
 @property (assign, nonatomic) CGRect originalFrame;
-@property (assign, nonatomic) CGRect tableFrame;
 @property (assign, nonatomic) CGFloat headerHeight;
 @property (strong, nonatomic) NSArray *options;
 @property (strong, nonatomic) UITableView *tableView;
@@ -39,7 +38,6 @@
         
         self.options = options;
         _isDropped = NO;
-        _labelTextAlignment = NSTextAlignmentNatural;
         _dropdownBackgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
         self.selectedOption = firstItem;
         
@@ -49,8 +47,6 @@
         
         self.rowHeight = 44.0f;
         self.headerHeight = 20.0f;
-        
-        self.listSeparator = UITableViewCellSeparatorStyleNone;
     }
     
     return self;
@@ -65,32 +61,31 @@
     return (UINavigationBar *)[self.customView superview];
 }
 
+-(CGFloat)screenHeight {
+    return [UIScreen mainScreen].bounds.size.height;
+}
+
+-(CGRect)tableFrame {
+    CGRect navFrame = [self navigationBar].frame;
+    return CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame) - self.headerHeight, CGRectGetWidth(navFrame), MIN(self.screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight) + self.headerHeight);
+}
+
 - (UITableView *)tableView {
-    if (!_tableView) {
-        CGRect navFrame = [self navigationBar].frame;
-        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-        BOOL greaterThanScreenSize = self.options.count * self.rowHeight > screenHeight - CGRectGetMaxY(navFrame);
-        
-        self.tableFrame = CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame) - self.headerHeight, CGRectGetWidth(navFrame), MIN(screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight) + self.headerHeight);
-        
+    if (!_tableView) {        
         _tableView = [[UITableView alloc] initWithFrame:self.tableFrame];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.allowsSelection = YES;
-        _tableView.scrollEnabled = greaterThanScreenSize;
-        _tableView.separatorStyle = self.listSeparator;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = self.rowHeight;
         _tableView.backgroundColor = self.dropdownBackgroundColor;
+        _tableView.layer.masksToBounds = NO;
+        _tableView.layer.shadowColor = [UIColor blackColor].CGColor;
+        _tableView.layer.shadowOffset = CGSizeMake(0.0f, 4.0f);
+        _tableView.layer.cornerRadius = 2.0f;
+        _tableView.layer.shadowOpacity = 0.3f;
         
         [self hideDropdownAnimated:NO];
-        
-        UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
-        self.tableView.layer.masksToBounds = NO;
-        self.tableView.layer.shadowColor = [UIColor blackColor].CGColor;
-        self.tableView.layer.shadowOffset = CGSizeMake(0.0f, 4.0f);
-        self.tableView.layer.cornerRadius = 2.0f;
-        self.tableView.layer.shadowOpacity = 0.3f;
-        self.tableView.layer.shadowPath = shadowPath.CGPath;
     }
     
     if (!_tableView.superview) {
@@ -107,19 +102,11 @@
 - (void)setRowHeight:(CGFloat)rowHeight {
     _rowHeight = rowHeight;
     _tableView.rowHeight = rowHeight;
-    CGRect tableFrame = self.tableFrame;
-    tableFrame.size.height = self.options.count * rowHeight;
-    self.tableFrame = tableFrame;
     [_tableView reloadData];
 }
 
 - (void)setDisplaysImageInList:(BOOL)displaysImageInList {
     _displaysImageInList = displaysImageInList;
-}
-
-- (void)setListSeparator:(UITableViewCellSeparatorStyle)listSeparator {
-    _listSeparator = listSeparator;
-    _tableView.separatorStyle = listSeparator;
 }
 
 - (void)toggleDropdown {
@@ -137,7 +124,15 @@
         [self.delegate dropdownPicker:self didDropDown:YES];
     }
     
+    CGRect navFrame = [self navigationBar].frame;
+    BOOL greaterThanScreenSize = self.options.count * self.rowHeight > self.screenHeight - CGRectGetMaxY(navFrame);
+    _tableView.scrollEnabled = greaterThanScreenSize;
+
     self.tableView.hidden = NO;
+    
+    
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
+    self.tableView.layer.shadowPath = shadowPath.CGPath;
     
     if (animated) {
         [UIView animateWithDuration:0.5
@@ -205,6 +200,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id <FSDPickerItemProtocol> item = [self.options objectAtIndex:indexPath.row];
+    
+    if([self.delegate respondsToSelector:@selector(dropdownPicker:cellForOption:)]) {
+        return [self.delegate dropdownPicker:self cellForOption:item];
+    }
+    
     static NSString *identifier = @"dropCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
@@ -217,17 +219,13 @@
         cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     
-    id <FSDPickerItemProtocol> item = [self.options objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = [item name];
     
     if (self.displaysImageInList) {
         cell.imageView.image = [item image];
     }
     
-    if(self.labelTextAlignment != NSTextAlignmentNatural) {
-        cell.textLabel.textAlignment = self.labelTextAlignment;
-    } else if(self.displaysImageInList) {
+    if(self.displaysImageInList) {
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
     } else {
         cell.textLabel.textAlignment = NSTextAlignmentCenter;

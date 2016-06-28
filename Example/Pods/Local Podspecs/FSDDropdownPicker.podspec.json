@@ -1,6 +1,6 @@
 {
   "name": "FSDDropdownPicker",
-  "version": "0.2.3",
+  "version": "0.2.10",
   "summary": "A dropdown picker component displayed from a UINavigationItem.",
   "description": "A DropDownList displayed from a UINavigationItem.\n* Set the items name and icons and the button will change accordingly",
   "homepage": "https://github.com/felix-dumit/FSDDropdownPicker",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/felix-dumit/FSDDropdownPicker.git",
-    "tag": "0.2.3"
+    "tag": "0.2.10"
   },
   "social_media_url": "https://twitter.com/felix_dumit",
   "platforms": {

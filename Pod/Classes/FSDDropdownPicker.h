@@ -13,7 +13,7 @@
 
 @protocol FSDDropdownPickerDelegate;
 
-@interface FSDDropdownPicker : UIBarButtonItem
+@interface FSDDropdownPicker<__covariant ItemType: id<FSDPickerItemProtocol>> : UIBarButtonItem
 
 /**
  *  The delegate
@@ -28,7 +28,7 @@
 /**
  *  The current selected option from the dropdown picker
  */
-@property (strong, nonatomic) id <FSDPickerItemProtocol> selectedOption;
+@property (strong, nonatomic) ItemType selectedOption;
 
 /**
  *  The height of each option in the dropdown picker
@@ -40,27 +40,21 @@
  */
 @property (assign, nonatomic) BOOL displaysImageInList;
 
-
 /**
  *  Color of the dropdown view
  */
 @property (strong, nonatomic) UIColor* dropdownBackgroundColor;
 
 /**
- *  The list separator style for the picker items
+ *  The tableView that will display the options when dropped down
  */
-@property (assign, nonatomic) UITableViewCellSeparatorStyle listSeparator;
+@property (strong, nonatomic, readonly) UITableView *tableView;
 
-
-/**
- *  The text alignment of the labels in the dropdown
- */
-@property (assign, nonatomic) NSTextAlignment labelTextAlignment;
 
 /**
  *  The array of options id<FSDPickerItemProtocol> to be selected
  */
-@property (strong, nonatomic, readonly) NSArray *options;
+@property (strong, nonatomic, readonly) NSArray <ItemType>*options;
 
 /**
  *  Initialize a FSDDropdownpicker instance given a list of items to display
@@ -105,7 +99,7 @@
  *  @return whether the dropdown should dismiss or not
  */
 - (BOOL)dropdownPicker:(FSDDropdownPicker *)dropdownPicker didSelectOption:(id <FSDPickerItemProtocol> )option;
-@optional
+
 
 /**
  *  Called when the dropdown picker shows or dismisses
@@ -113,6 +107,20 @@
  *  @param dropdownPicker the dropdown picker
  *  @param drop           YES if picker was shown, NO if it was hidden
  */
+@optional
 - (void)dropdownPicker:(FSDDropdownPicker *)dropdownPicker didDropDown:(BOOL)drop;
+
+
+/**
+ *  Called to display an option in the list
+ *
+ *  @param dropdownPicker the dropdown picker
+ *  @param option         the option to be displayed in the dropdown list
+ *
+ *  @return a tableView cell to be displayed in the list
+ */
+@optional
+- (UITableViewCell*)dropdownPicker:(FSDDropdownPicker *)dropdownPicker cellForOption:(id<FSDPickerItemProtocol>)option;
+
 
 @end

@@ -42,6 +42,8 @@
     picker.displaysImageInList = YES;
     
     [self.mapView setCenterCoordinate:item1.coordinate];
+    
+    [picker.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
 }
 
 #pragma mark - FSDDropdownPickerDelegate
@@ -59,6 +61,13 @@
     
     //if the picker should dismiss
     return YES;
+}
+
+-(UITableViewCell *)dropdownPicker:(FSDDropdownPicker *)dropdownPicker cellForOption:(id<FSDPickerItemProtocol>)option {
+    UITableViewCell* cell = [dropdownPicker.tableView dequeueReusableCellWithIdentifier:@"tableCell"];
+    cell.textLabel.text = option.name;
+    cell.imageView.image = option.image;
+    return cell;
 }
 
 @end
