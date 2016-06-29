@@ -215,7 +215,7 @@
         cell.textLabel.font = [UIFont systemFontOfSize:self.rowHeight / 2.3];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     
