@@ -130,10 +130,6 @@
 
     self.tableView.hidden = NO;
     
-    
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
-    self.tableView.layer.shadowPath = shadowPath.CGPath;
-    
     if (animated) {
         [UIView animateWithDuration:0.5
                               delay:0
@@ -145,6 +141,10 @@
                          }
          
                          completion: ^(BOOL finished) {
+                             
+                             UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
+                             self.tableView.layer.shadowPath = shadowPath.CGPath;
+                             
                              NSIndexPath* ip = [NSIndexPath indexPathForRow:[self.options indexOfObject:self.selectedOption] inSection:0];
                              [self.tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionNone];
                          }];
