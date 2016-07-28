@@ -67,11 +67,14 @@
 
 -(CGRect)tableFrame {
     CGRect navFrame = [self navigationBar].frame;
+    if(CGRectEqualToRect(navFrame, CGRectZero)) {
+        navFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
+    }
     return CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame) - self.headerHeight, CGRectGetWidth(navFrame), MIN(self.screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight) + self.headerHeight);
 }
 
 - (UITableView *)tableView {
-    if (!_tableView) {        
+    if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.tableFrame];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -127,7 +130,7 @@
     CGRect navFrame = [self navigationBar].frame;
     BOOL greaterThanScreenSize = self.options.count * self.rowHeight > self.screenHeight - CGRectGetMaxY(navFrame);
     _tableView.scrollEnabled = greaterThanScreenSize;
-
+    
     self.tableView.hidden = NO;
     
     if (animated) {
@@ -138,19 +141,17 @@
                             options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
                              self.tableView.frame = self.tableFrame;
+                             UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
+                             self.tableView.layer.shadowPath = shadowPath.CGPath;
                          }
          
                          completion: ^(BOOL finished) {
-                             
-                             UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
-                             self.tableView.layer.shadowPath = shadowPath.CGPath;
                              
                              NSIndexPath* ip = [NSIndexPath indexPathForRow:[self.options indexOfObject:self.selectedOption] inSection:0];
                              [self.tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionNone];
                          }];
     } else {
         self.tableView.frame = self.tableFrame;
-        //        self.frame = self.originalFrame;
     }
     
     [self.tableView.superview insertSubview:self.tapOutView belowSubview:self.tableView];
@@ -178,7 +179,9 @@
                          }
          
                          completion: ^(BOOL finished) {
-                             self.tableView.hidden = YES;
+                             if(!_isDropped) {
+                                 self.tableView.hidden = YES;
+                             }
                          }];
     } else {
         self.tableView.frame = frame;
