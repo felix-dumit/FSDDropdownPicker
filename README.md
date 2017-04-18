@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/FSDDropdownPicker.svg?style=flat)](http://cocoadocs.org/docsets/FSDDropdownPicker)
 [![Platform](https://img.shields.io/cocoapods/p/FSDDropdownPicker.svg?style=flat)](http://cocoadocs.org/docsets/FSDDropdownPicker)
 
-##Example
+## Example
 
 ![Example](http://gifyu.com/images/temp2.gif)
 
@@ -13,7 +13,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-###Create instance
+### Create instance
 You can create an intance directly by passing in an `NSArray` of items that conform to the `FSDPickerItemProtocol`, if you just want an item with a name and image you can use the provided `FSDPickerItem` :
 
 ```objc
@@ -29,7 +29,7 @@ FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@
 
 The dropdown picker will dismiss if tapped outside or tapped the dropdown button.
 
-###FSDDropdownPickerDelegate
+### FSDDropdownPickerDelegate
 > The delegate can respond to the following events:
 
 ```objc
@@ -46,7 +46,7 @@ picker.delegate = self;
 }
 ```
 
-###Customization
+### Customization
 > You can customize the following options: 
 
 ```objc
