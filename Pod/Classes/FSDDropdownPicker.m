@@ -58,7 +58,11 @@
 }
 
 - (UINavigationBar *)navigationBar {
-    return (UINavigationBar *)[self.customView superview];
+    UINavigationBar *s = (UINavigationBar*)self.customView.superview;
+    while (s && ![s isKindOfClass:[UINavigationBar class]]) {
+        s = (UINavigationBar*)s.superview;
+    }
+    return s;
 }
 
 -(CGFloat)screenHeight {
