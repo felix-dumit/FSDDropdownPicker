@@ -29,6 +29,7 @@
     UIImage *buttonImage = [firstItem image];
     UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [actionButton setImage:buttonImage forState:UIControlStateNormal];
+    actionButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     actionButton.frame = CGRectMake(0.0, 0.0, 44, 44); //buttonImage.size.width, buttonImage.size.height);
     
     if (self = [super initWithCustomView:actionButton]) {
