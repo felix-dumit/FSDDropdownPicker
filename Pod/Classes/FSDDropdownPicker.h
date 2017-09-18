@@ -68,14 +68,14 @@
 /**
  *  Shows the dropdown list
  *
- *  @param animated
+ *  @param animated If the dropdown should show animated
  */
 - (void)showDropdownAnimated:(BOOL)animated;
 
 /**
  *  Hides the dropdown list
  *
- *  @param animated
+ *  @param animated If the dropdown should hide animated
  */
 - (void)hideDropdownAnimated:(BOOL)animated;
 
