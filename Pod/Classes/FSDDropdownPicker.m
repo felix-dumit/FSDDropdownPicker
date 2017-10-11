@@ -31,8 +31,13 @@
     [actionButton setImage:buttonImage forState:UIControlStateNormal];
     actionButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     actionButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [actionButton.widthAnchor constraintEqualToConstant:36].active = YES;
-    [actionButton.heightAnchor constraintEqualToConstant:36].active = YES;
+    NSLayoutConstraint* constraint = nil;
+    constraint = [actionButton.widthAnchor constraintEqualToConstant:36];
+    constraint.priority = 999;
+    [constraint setActive:YES];
+    constraint = [actionButton.heightAnchor constraintEqualToConstant:36];
+    constraint.priority = 999;
+    [constraint setActive:YES];
     
     if (self = [super initWithCustomView:actionButton]) {
         [actionButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
