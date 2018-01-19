@@ -64,7 +64,10 @@
 }
 
 -(UITableViewCell *)dropdownPicker:(FSDDropdownPicker *)dropdownPicker cellForOption:(id<FSDPickerItemProtocol>)option {
-    UITableViewCell* cell = [dropdownPicker.tableView dequeueReusableCellWithIdentifier:@"tableCell"];
+    NSIndexPath* ip = [NSIndexPath indexPathForRow:[dropdownPicker.options indexOfObject:option]
+                                         inSection:0];
+    UITableViewCell* cell = [dropdownPicker.tableView dequeueReusableCellWithIdentifier:@"tableCell"
+                                                                           forIndexPath:ip];
     cell.textLabel.text = option.name;
     cell.imageView.image = option.image;
     return cell;

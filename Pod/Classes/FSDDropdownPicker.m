@@ -87,10 +87,11 @@
         _tableView.backgroundColor = self.dropdownBackgroundColor;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         _tableView.sectionHeaderHeight = self.headerHeight;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"fsd_table_cell"];
     }
-
+    
     UINavigationBar* navbar = [self navigationBar];
-
+    
     if (!_tableView.superview && navbar.superview) {
         UIView* superview = navbar.superview;
         [superview insertSubview:_tableView belowSubview:navbar];
@@ -106,7 +107,7 @@
 }
 
 -(void) calculateTableViewHeight {
-    _tableView.heightConstraint.constant = self.options.count * self.rowHeight;
+    _tableView.heightConstraint.constant = self.options.count * self.rowHeight + self.headerHeight;
     [_tableView setNeedsLayout];
 }
 
@@ -214,17 +215,13 @@
         return [self.delegate dropdownPicker:self cellForOption:item];
     }
     
-    static NSString *identifier = @"dropCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    UITableViewCell* cell =  [tableView dequeueReusableCellWithIdentifier:@"fsd_table_cell" forIndexPath:indexPath];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.textLabel.font = [UIFont systemFontOfSize:self.rowHeight / 2.3];
-        cell.textLabel.textColor = [UIColor blackColor];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    }
+    cell.textLabel.font = [UIFont systemFontOfSize:self.rowHeight / 2.3];
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     cell.textLabel.text = [item name];
     
@@ -322,8 +319,8 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     self.scrollEnabled = self.contentSize.height > self.bounds.size.height + self.sectionHeaderHeight;
-//    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
-//    self.layer.shadowPath = shadowPath.CGPath;
+    //    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
+    //    self.layer.shadowPath = shadowPath.CGPath;
 }
 
 @end
