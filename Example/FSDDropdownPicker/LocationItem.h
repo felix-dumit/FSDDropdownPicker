@@ -10,11 +10,13 @@
 #import <UIKit/UIKit.h>
 #import <FSDDropdownPicker/FSDPickerItemProtocol.h>
 #import <CoreLocation/CoreLocation.h>
+@import FlagKit;
 
 @interface LocationItem : NSObject <FSDPickerItemProtocol>
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) FKFlag* flag;
+@property (strong, nonatomic, readonly) UIImage *image;
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
 @end

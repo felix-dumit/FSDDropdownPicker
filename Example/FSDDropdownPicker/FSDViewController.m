@@ -24,26 +24,28 @@
     
     LocationItem *item1 = [[LocationItem alloc] init];
     item1.name = @"Brasil";
-    item1.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"BR"];
+    item1.flag = [[FKFlag alloc] initWithCountryCode:@"BR"];
     item1.coordinate = CLLocationCoordinate2DMake(-15.7833, -47.8667);
     
     LocationItem *item2 = [[LocationItem alloc] init];
     item2.name = @"USA";
-    item2.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"US"];
+    item2.flag = [[FKFlag alloc] initWithCountryCode:@"US"];
     item2.coordinate = CLLocationCoordinate2DMake(38.8833, -77.0167);
     
     LocationItem *item3 = [[LocationItem alloc] init];
     item3.name = @"Japan";
-    item3.image = [[UIImage alloc] initWithFlagImageWithCountryCode:@"JP"];
+    item3.flag = [[FKFlag alloc] initWithCountryCode:@"JP"];
     item3.coordinate = CLLocationCoordinate2DMake(35.6833, 139.7667);
     
-    FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
+    FSDDropdownPicker<LocationItem*> *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
     picker.delegate = self;
     picker.displaysImageInList = YES;
     
     [self.mapView setCenterCoordinate:item1.coordinate];
     
     [picker.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
+    
+    self.title = picker.options.firstObject.name;
 }
 
 #pragma mark - FSDDropdownPickerDelegate
@@ -52,11 +54,9 @@
 }
 
 - (BOOL)dropdownPicker:(FSDDropdownPicker *)dropdownPicker didSelectOption:(id <FSDPickerItemProtocol> )option {
-    NSLog(@"option selected: %@", [option name]);
-    self.title = [option name];
-    
+    NSLog(@"option selected: %@", option.name);
+    self.title = option.name;
     LocationItem *item = (LocationItem *)option;
-    
     [self.mapView setCenterCoordinate:item.coordinate];
     
     //if the picker should dismiss

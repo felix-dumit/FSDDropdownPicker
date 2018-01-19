@@ -1,6 +1,6 @@
 PODS:
-  - FlagKit (1.0.7)
-  - FSDDropdownPicker (0.2.10)
+  - FlagKit (2.0.1)
+  - FSDDropdownPicker (0.4.0)
 
 DEPENDENCIES:
   - FlagKit
@@ -8,12 +8,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   FSDDropdownPicker:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  FlagKit: dffc62b4c5db33043c89bbda0bda897077d521e5
-  FSDDropdownPicker: 529a7ea6daf40a7682035f2fa4a04a77b6840b6a
+  FlagKit: 75c64346179f254d1753bebdc5b1f9cbe7890748
+  FSDDropdownPicker: 77d77dd1961825b23147e42c7d391b6653e48e85
 
-PODFILE CHECKSUM: e9dd8a6f3d348da6be5c4eafa8ff29743851582c
+PODFILE CHECKSUM: 84b1dd4c32e97a6f3709d3df8d4e00d5743a4633
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.4.0

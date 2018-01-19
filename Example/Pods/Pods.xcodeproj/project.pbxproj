@@ -7,158 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0309BA1322DDAC13D1299A0A0C1D38A0 /* FSDDropdownPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B5A808BEFE56387E5FCA98C1B77B609 /* FSDDropdownPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D77B50789539B578801D760C1EE6E50 /* FSDDropdownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AE064BF6604B2E897920808AD7B6CF7E /* FSDDropdownPicker.m */; };
-		2ED2E9382D14788BDF72194DCD263B86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		2EF5C93B8B2942D19B6C06DEA3E516FE /* FSDDropdownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 130EC7B22E70E0EB18B8CB82A21D883B /* FSDDropdownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47D469F96989BA6420EF51D57BDD684F /* FSDDropdownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFE67CD0D0A74F34897B8A4E46D54F /* FSDDropdownPicker-dummy.m */; };
-		5A9590499C4C745475930F5704812660 /* FSDPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE1EB89556E9B916C9F6165B73680F4 /* FSDPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		717DEEBA0C6FDEF5E13E6DDB59076832 /* FSDPickerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 235ED1B4394F1C36917AF6D6F4D023EF /* FSDPickerItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		759BB8D3E1921E7D70ECDFADF013B045 /* Pods-FSDDropdownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 595170AE444D304B107BA80CD73D450B /* Pods-FSDDropdownPicker-dummy.m */; };
-		7EC6F59C095A9AA5935108008903B804 /* Pods-FSDDropdownPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188D3FE74741088E2E0AF2DE47B9BA /* Pods-FSDDropdownPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		946CAD817B1490FAA8C164FF4D941B4E /* FlagKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6CC122301E701B944C198AF583E745 /* FlagKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADEF9313EA8274212B80DB26021C0AB6 /* FlagKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B53E774C7CFF76091165892FB1D24A26 /* FlagKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9B907FFE7876D97EB2DC6188AFEA2B9 /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C13FC3C8E47F43A1E2E1D56289C3E3 /* FlagKit.swift */; };
-		BEC8F06FE8F3683B44CC4F1E3D9B2415 /* FlagKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3912B44958B5C45B790391A4ABC49BA /* FlagKit-dummy.m */; };
-		C5EF133392A3BC735C793EBDBBE46DC9 /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B8E8DE8F3E2F3C493E25963A9BB5AD /* FlagKit.xcassets */; };
-		CDA18912596D4436C9CB76D6A2E777C2 /* FSDPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1271C5C848F3FE3A97780D07921434 /* FSDPickerItem.m */; };
-		D8E6D8CCDE9F51787E9F0A8CB54590DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		DCD85F52A526EC5CAC59D07AF765509A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22F22A5A1DA29ACF1D255D6E061A28 /* UIImage.swift */; };
-		DDDCA79FEBA4F132F4F2EEC5339C9390 /* UINavigationItem+FSDPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D9098DD686513974D791B7C0B47C678 /* UINavigationItem+FSDPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F77FA2A5A5FA4D748EA37DFB7BAFF708 /* UINavigationItem+FSDPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7DA5393BCE4FC4A8E13ECA5191CB0D /* UINavigationItem+FSDPicker.m */; };
-		FCF6FE884285754CB91C799745D00192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		11B31EAD249E070A0B2749AF22613D13 /* FSDPickerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 02280B4999D404956B327145E18C9A95 /* FSDPickerItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2212097A17C09C4177550A5574BD1D61 /* FlagKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B61EA937D5D74B37FF6BDBBDF3AC523A /* FlagKit-dummy.m */; };
+		415057E07BD0140E4E02E93D22A296D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5ED62FEA192FE805FAAAC6DA21B3C5A4 /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B61644BD3EBA5E2AC9D23585670AF7 /* FlagKit.xcassets */; };
+		61D2BA7D5CC823D8895DA1C261DD85C4 /* Pods-FSDDropdownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 595170AE444D304B107BA80CD73D450B /* Pods-FSDDropdownPicker-dummy.m */; };
+		6A6D3A2F3310E571BAAFD13E57D28942 /* FlagStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E3D3A4A103CE3D267CD67F9EA5694 /* FlagStyle.swift */; };
+		7196AE5C201CC1896AFD22A92D3BC19C /* FSDDropdownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B99243928B8688D2A245EB3322A114 /* FSDDropdownPicker.m */; };
+		8066DFEFC2164BD0F8183CF20D1ED078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		89D364E8AA40E41208AD20B3D24B30F6 /* Pods-FSDDropdownPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188D3FE74741088E2E0AF2DE47B9BA /* Pods-FSDDropdownPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A4C555B5DB41A1A1566C0B23276C7AA /* FSDPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E17186A44C182D6A7BA09AAE648B16 /* FSDPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D2276BCE8FA1B878D629710F9FAAFAB /* UINavigationItem+FSDPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 990D683570B650C398C617713F3714C6 /* UINavigationItem+FSDPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D40718BB2501404255370F041135E3F /* FSDDropdownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C7575A687F3BDB3F6CC70956FBDF24 /* FSDDropdownPicker-dummy.m */; };
+		91AD01924FF9F6A73ADC33C340AE9169 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B187BA2C4ACE83C2CDFF20C554B4E /* Flag.swift */; };
+		9A5523B8B9DED1CDA2E94F060F00D14D /* FSDDropdownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F7F558C1E2D6AB08A4E0509AE669FB5D /* FSDDropdownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C86F0C8765FF944B344A78F54312A7F /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C514D48CD998220377E4896F8079843 /* NSImage.swift */; };
+		A28CB25BE2F9FA750AF8F19EC53C6EF8 /* FSDDropdownPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2300D28098EFB3B4EF375E8C7CDA34EF /* FSDDropdownPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0ECDB50010556DB551277D942BAB31 /* UINavigationItem+FSDPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D189849C7B5BF88B966E27A27D12C4 /* UINavigationItem+FSDPicker.m */; };
+		CCB9BD73F4FB8CDEE7BCA20CE4B9CBE7 /* FlagKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1296B07A0560296C4372ABEE5E5401E /* FlagKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE038A5EC8BCB8F2233E8CB0938647D4 /* FlagKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CA297C0749F002EA8F4E646E990D5 /* FlagKit.swift */; };
+		DA783D3BFEFCBF977D40977D54C6623D /* FSDPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F17A3A8DD67986C634F2D9F9D94F2 /* FSDPickerItem.m */; };
+		F3F4C0F8401EAB674CD73B2B20168916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FA92EBB9D7BDB7746287DB2CE59ECFBE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0AC7F49560F51E1CAC4DA875A4169 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		730A327D3C30C0CC1706CC424565E9FC /* PBXContainerItemProxy */ = {
+		60925F22BB7EC0B3F4339157524F488E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 58538D686F5ABA6D751FB325AA5C4156;
-			remoteInfo = FlagKit;
-		};
-		C96DB6DE8FF97DE97E38899F997A6E0A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFAB8B4732F00D595A579A5C98F90C27;
+			remoteGlobalIDString = B8B6ED35E66F35790F80868CD3531A1C;
 			remoteInfo = FSDDropdownPicker;
+		};
+		F8D16E794703C16CEF5EB6EF40F7CD09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33DF14505F36AF9F6FF97063882702E0;
+			remoteInfo = FlagKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02280B4999D404956B327145E18C9A95 /* FSDPickerItemProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDPickerItemProtocol.h; path = Pod/Classes/FSDPickerItemProtocol.h; sourceTree = "<group>"; };
 		04A9FB7C60C90CA628A710AC0DEE2510 /* Pods-FSDDropdownPicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FSDDropdownPicker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		05DB5F1F4A9833AF7516A8CF2EC38FE5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06754ACF5BE9D8AA34F14B43B496DA5F /* Pods-FSDDropdownPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSDDropdownPicker.debug.xcconfig"; sourceTree = "<group>"; };
-		122AF6E051FF54F54BDA7BFFEDD9C404 /* FSDDropdownPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSDDropdownPicker.xcconfig; sourceTree = "<group>"; };
-		130EC7B22E70E0EB18B8CB82A21D883B /* FSDDropdownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSDDropdownPicker.h; sourceTree = "<group>"; };
-		16B8E8DE8F3E2F3C493E25963A9BB5AD /* FlagKit.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = FlagKit.xcassets; sourceTree = "<group>"; };
-		19F8F70E458A803F6B191B719A117AB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		067B187BA2C4ACE83C2CDFF20C554B4E /* Flag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flag.swift; path = Sources/Swift/FlagKit/Flag.swift; sourceTree = "<group>"; };
+		07E30214A1B56E8994BFFE08A6A323E4 /* FSDDropdownPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FSDDropdownPicker.podspec; sourceTree = "<group>"; };
+		0C3B7E8BC26494661E1B848782660ED5 /* FlagKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FlagKit.modulemap; sourceTree = "<group>"; };
+		1950435F6666BC84507CE2B096A35267 /* FSDDropdownPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FSDDropdownPicker.modulemap; sourceTree = "<group>"; };
 		1B188D3FE74741088E2E0AF2DE47B9BA /* Pods-FSDDropdownPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FSDDropdownPicker-umbrella.h"; sourceTree = "<group>"; };
-		1B5A808BEFE56387E5FCA98C1B77B609 /* FSDDropdownPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSDDropdownPicker-umbrella.h"; sourceTree = "<group>"; };
-		1C31CAD91B51DC426786F2E2FCB575A8 /* FSDDropdownPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FSDDropdownPicker.modulemap; sourceTree = "<group>"; };
-		235ED1B4394F1C36917AF6D6F4D023EF /* FSDPickerItemProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSDPickerItemProtocol.h; sourceTree = "<group>"; };
-		25E0E55A6DA54A06A6427F160C9CD2BB /* FSDDropdownPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSDDropdownPicker-prefix.pch"; sourceTree = "<group>"; };
-		2DE1EB89556E9B916C9F6165B73680F4 /* FSDPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSDPickerItem.h; sourceTree = "<group>"; };
-		396710F001F6748066199C712BCA5D04 /* FlagKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlagKit-prefix.pch"; sourceTree = "<group>"; };
-		3A1271C5C848F3FE3A97780D07921434 /* FSDPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FSDPickerItem.m; sourceTree = "<group>"; };
-		3C6CC122301E701B944C198AF583E745 /* FlagKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlagKit-umbrella.h"; sourceTree = "<group>"; };
-		3FAFE67CD0D0A74F34897B8A4E46D54F /* FSDDropdownPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSDDropdownPicker-dummy.m"; sourceTree = "<group>"; };
-		4D9098DD686513974D791B7C0B47C678 /* UINavigationItem+FSDPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+FSDPicker.h"; sourceTree = "<group>"; };
+		2300D28098EFB3B4EF375E8C7CDA34EF /* FSDDropdownPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSDDropdownPicker-umbrella.h"; sourceTree = "<group>"; };
+		281C8FD13A91DBD9C0594DE49657A1B7 /* FlagKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlagKit.xcconfig; sourceTree = "<group>"; };
+		30B61644BD3EBA5E2AC9D23585670AF7 /* FlagKit.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = FlagKit.xcassets; path = Assets/FlagKit.xcassets; sourceTree = "<group>"; };
+		32C7575A687F3BDB3F6CC70956FBDF24 /* FSDDropdownPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSDDropdownPicker-dummy.m"; sourceTree = "<group>"; };
+		352AE913B37DFAB99CFACF227A559CB9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3AB0AC7F49560F51E1CAC4DA875A4169 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Swift/FlagKit/UIImage.swift; sourceTree = "<group>"; };
+		40F0208A55B4E4FC5B522799D92740CB /* FSDDropdownPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSDDropdownPicker-prefix.pch"; sourceTree = "<group>"; };
+		540D6B33CDCEF7B0CA9FAD598474D542 /* FSDDropdownPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSDDropdownPicker.xcconfig; sourceTree = "<group>"; };
 		595170AE444D304B107BA80CD73D450B /* Pods-FSDDropdownPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FSDDropdownPicker-dummy.m"; sourceTree = "<group>"; };
 		59CBE675C8F5735422515406EB19EFDE /* FlagKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlagKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C514D48CD998220377E4896F8079843 /* NSImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = Sources/Swift/FlagKit/NSImage.swift; sourceTree = "<group>"; };
 		65F6241E25D2FB7FAFF2EDAD437AF7AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C22F22A5A1DA29ACF1D255D6E061A28 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = "FlagKit-iOS/UIImage.swift"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70B99243928B8688D2A245EB3322A114 /* FSDDropdownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDDropdownPicker.m; path = Pod/Classes/FSDDropdownPicker.m; sourceTree = "<group>"; };
+		783E3D3A4A103CE3D267CD67F9EA5694 /* FlagStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlagStyle.swift; path = Sources/Swift/FlagKit/FlagStyle.swift; sourceTree = "<group>"; };
 		8D099B46BE15231E3A6281055857094C /* Pods-FSDDropdownPicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FSDDropdownPicker-resources.sh"; sourceTree = "<group>"; };
 		92CE15A761739FF4016CF4D650876AEC /* Pods-FSDDropdownPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FSDDropdownPicker.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95C13FC3C8E47F43A1E2E1D56289C3E3 /* FlagKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlagKit.swift; path = "FlagKit-Common/FlagKit.swift"; sourceTree = "<group>"; };
-		AE064BF6604B2E897920808AD7B6CF7E /* FSDDropdownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FSDDropdownPicker.m; sourceTree = "<group>"; };
-		B53E774C7CFF76091165892FB1D24A26 /* FlagKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlagKit.h; path = "FlagKit-iOS/FlagKit.h"; sourceTree = "<group>"; };
+		98752A046FAAD69589C9D0028F06BF34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		990D683570B650C398C617713F3714C6 /* UINavigationItem+FSDPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+FSDPicker.h"; path = "Pod/Classes/UINavigationItem+FSDPicker.h"; sourceTree = "<group>"; };
+		ACD8C1ABAE4E20E824D35D574D5F59B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1296B07A0560296C4372ABEE5E5401E /* FlagKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlagKit-umbrella.h"; sourceTree = "<group>"; };
+		B61EA937D5D74B37FF6BDBBDF3AC523A /* FlagKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlagKit-dummy.m"; sourceTree = "<group>"; };
 		BB8438E12A9F272F35973AFC41BE5B38 /* Pods-FSDDropdownPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSDDropdownPicker.release.xcconfig"; sourceTree = "<group>"; };
 		BC37E52882AE18E77FCF51C9BDBF60AD /* Pods_FSDDropdownPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSDDropdownPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE7DA5393BCE4FC4A8E13ECA5191CB0D /* UINavigationItem+FSDPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+FSDPicker.m"; sourceTree = "<group>"; };
+		BD5F17A3A8DD67986C634F2D9F9D94F2 /* FSDPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDPickerItem.m; path = Pod/Classes/FSDPickerItem.m; sourceTree = "<group>"; };
+		C5D189849C7B5BF88B966E27A27D12C4 /* UINavigationItem+FSDPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+FSDPicker.m"; path = "Pod/Classes/UINavigationItem+FSDPicker.m"; sourceTree = "<group>"; };
 		CB989FBD13BD80CF5F9040A5E2EAF82F /* Pods-FSDDropdownPicker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FSDDropdownPicker-frameworks.sh"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D025F2C979E3D32865F6241F18B6F13F /* FlagKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlagKit.xcconfig; sourceTree = "<group>"; };
-		D3912B44958B5C45B790391A4ABC49BA /* FlagKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlagKit-dummy.m"; sourceTree = "<group>"; };
-		E6D37FB7C6204EA7F1D36132AC04E4E6 /* FlagKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FlagKit.modulemap; sourceTree = "<group>"; };
+		D4E17186A44C182D6A7BA09AAE648B16 /* FSDPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDPickerItem.h; path = Pod/Classes/FSDPickerItem.h; sourceTree = "<group>"; };
+		E499D6B107E1DFEDA14918CEF4A0882E /* FlagKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlagKit-prefix.pch"; sourceTree = "<group>"; };
 		E7642D28AFD7CC4BE22E9C73E0E64993 /* FSDDropdownPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSDDropdownPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8714C996999F63F09E3E5DEBDCB1A63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50CA297C0749F002EA8F4E646E990D5 /* FlagKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlagKit.swift; path = Sources/Swift/FlagKit/FlagKit.swift; sourceTree = "<group>"; };
 		F5900CD304AA0F1AE35910CD38BE3EDD /* Pods-FSDDropdownPicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FSDDropdownPicker-acknowledgements.plist"; sourceTree = "<group>"; };
+		F7F558C1E2D6AB08A4E0509AE669FB5D /* FSDDropdownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDDropdownPicker.h; path = Pod/Classes/FSDDropdownPicker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B68C5CD0BBCE3449B9463B29B0CD3EE /* Frameworks */ = {
+		87E4B0FD20D42A446BE8A52D451F5F9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF6FE884285754CB91C799745D00192 /* Foundation.framework in Frameworks */,
+				8066DFEFC2164BD0F8183CF20D1ED078 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B23E0FA45C754EFB30E88B0BF6309CD9 /* Frameworks */ = {
+		DC2536961B09EF928A1704AC71F32C3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED2E9382D14788BDF72194DCD263B86 /* Foundation.framework in Frameworks */,
+				F3F4C0F8401EAB674CD73B2B20168916 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0D693041796305C04FBB2F0E25D8CFE /* Frameworks */ = {
+		E4C139631F455E14FBE9358EE0D68FA0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E6D8CCDE9F51787E9F0A8CB54590DA /* Foundation.framework in Frameworks */,
+				415057E07BD0140E4E02E93D22A296D0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11B1D72B32B30DE4A844DA5683CED18F /* Pods */ = {
+		03A8FE88E4CEE7E2DCEF971B697D6B98 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F3E2BB0436F6C03C4DBC6367B047F888 /* FlagKit */,
+				528D8FF1822AEF7A7656655BE9C11567 /* FlagKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		26177FD75A6EBB1E8A2818AB6F2DCDB0 /* Pod */ = {
+		074A01D05C0182A19D2CE839AAFC1359 /* FSDDropdownPicker */ = {
 			isa = PBXGroup;
 			children = (
-				411B53671A49597B1FC42AF0F71556D5 /* Classes */,
+				F7F558C1E2D6AB08A4E0509AE669FB5D /* FSDDropdownPicker.h */,
+				70B99243928B8688D2A245EB3322A114 /* FSDDropdownPicker.m */,
+				D4E17186A44C182D6A7BA09AAE648B16 /* FSDPickerItem.h */,
+				BD5F17A3A8DD67986C634F2D9F9D94F2 /* FSDPickerItem.m */,
+				02280B4999D404956B327145E18C9A95 /* FSDPickerItemProtocol.h */,
+				990D683570B650C398C617713F3714C6 /* UINavigationItem+FSDPicker.h */,
+				C5D189849C7B5BF88B966E27A27D12C4 /* UINavigationItem+FSDPicker.m */,
+				F180C8AC4BCA9BEEE3D7C13D014A01F5 /* Pod */,
+				49BEC3DD1959D356B59BC40C254F8F4F /* Support Files */,
 			);
-			path = Pod;
+			name = FSDDropdownPicker;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		2B04BC2CA4520BA6B6B93AB1430035DC /* Development Pods */ = {
+		2DD68CAF302F2200EC10D2CEE0CA273A /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9E25AB5C74901420F6DB68E8AC103D85 /* FSDDropdownPicker */,
+				074A01D05C0182A19D2CE839AAFC1359 /* FSDDropdownPicker */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		49BEC3DD1959D356B59BC40C254F8F4F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				1950435F6666BC84507CE2B096A35267 /* FSDDropdownPicker.modulemap */,
+				540D6B33CDCEF7B0CA9FAD598474D542 /* FSDDropdownPicker.xcconfig */,
+				32C7575A687F3BDB3F6CC70956FBDF24 /* FSDDropdownPicker-dummy.m */,
+				40F0208A55B4E4FC5B522799D92740CB /* FSDDropdownPicker-prefix.pch */,
+				2300D28098EFB3B4EF375E8C7CDA34EF /* FSDDropdownPicker-umbrella.h */,
+				E8714C996999F63F09E3E5DEBDCB1A63 /* Info.plist */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		411B53671A49597B1FC42AF0F71556D5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				130EC7B22E70E0EB18B8CB82A21D883B /* FSDDropdownPicker.h */,
-				AE064BF6604B2E897920808AD7B6CF7E /* FSDDropdownPicker.m */,
-				2DE1EB89556E9B916C9F6165B73680F4 /* FSDPickerItem.h */,
-				3A1271C5C848F3FE3A97780D07921434 /* FSDPickerItem.m */,
-				235ED1B4394F1C36917AF6D6F4D023EF /* FSDPickerItemProtocol.h */,
-				4D9098DD686513974D791B7C0B47C678 /* UINavigationItem+FSDPicker.h */,
-				BE7DA5393BCE4FC4A8E13ECA5191CB0D /* UINavigationItem+FSDPicker.m */,
-			);
-			path = Classes;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FSDDropdownPicker";
 			sourceTree = "<group>";
 		};
 		4C461AF93CB6B720A7C6015313B5D354 /* Products */ = {
@@ -189,35 +197,27 @@
 			path = "Target Support Files/Pods-FSDDropdownPicker";
 			sourceTree = "<group>";
 		};
-		63DBFEBA24253C1279FB5F1784BC8CB3 /* Support Files */ = {
+		528D8FF1822AEF7A7656655BE9C11567 /* FlagKit */ = {
 			isa = PBXGroup;
 			children = (
-				E6D37FB7C6204EA7F1D36132AC04E4E6 /* FlagKit.modulemap */,
-				D025F2C979E3D32865F6241F18B6F13F /* FlagKit.xcconfig */,
-				D3912B44958B5C45B790391A4ABC49BA /* FlagKit-dummy.m */,
-				396710F001F6748066199C712BCA5D04 /* FlagKit-prefix.pch */,
-				3C6CC122301E701B944C198AF583E745 /* FlagKit-umbrella.h */,
-				05DB5F1F4A9833AF7516A8CF2EC38FE5 /* Info.plist */,
+				067B187BA2C4ACE83C2CDFF20C554B4E /* Flag.swift */,
+				F50CA297C0749F002EA8F4E646E990D5 /* FlagKit.swift */,
+				783E3D3A4A103CE3D267CD67F9EA5694 /* FlagStyle.swift */,
+				5C514D48CD998220377E4896F8079843 /* NSImage.swift */,
+				3AB0AC7F49560F51E1CAC4DA875A4169 /* UIImage.swift */,
+				EFBC876D9CAE0FB1F08934E910DB1AC6 /* Resources */,
+				9F99C5230DAC440951B2099D6745BF4D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FlagKit";
-			sourceTree = "<group>";
-		};
-		682D47A0CE4226F96FEC2F43CFF65BAA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				16B8E8DE8F3E2F3C493E25963A9BB5AD /* FlagKit.xcassets */,
-			);
-			name = Resources;
+			path = FlagKit;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				2B04BC2CA4520BA6B6B93AB1430035DC /* Development Pods */,
+				2DD68CAF302F2200EC10D2CEE0CA273A /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				11B1D72B32B30DE4A844DA5683CED18F /* Pods */,
+				03A8FE88E4CEE7E2DCEF971B697D6B98 /* Pods */,
 				4C461AF93CB6B720A7C6015313B5D354 /* Products */,
 				8E072C927F5E5F6315737936C81E37E2 /* Targets Support Files */,
 			);
@@ -231,93 +231,96 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9E25AB5C74901420F6DB68E8AC103D85 /* FSDDropdownPicker */ = {
+		9F99C5230DAC440951B2099D6745BF4D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				26177FD75A6EBB1E8A2818AB6F2DCDB0 /* Pod */,
-				A9D73EDBE03F9D89C878033268430B8D /* Support Files */,
-			);
-			name = FSDDropdownPicker;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		A9D73EDBE03F9D89C878033268430B8D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C31CAD91B51DC426786F2E2FCB575A8 /* FSDDropdownPicker.modulemap */,
-				122AF6E051FF54F54BDA7BFFEDD9C404 /* FSDDropdownPicker.xcconfig */,
-				3FAFE67CD0D0A74F34897B8A4E46D54F /* FSDDropdownPicker-dummy.m */,
-				25E0E55A6DA54A06A6427F160C9CD2BB /* FSDDropdownPicker-prefix.pch */,
-				1B5A808BEFE56387E5FCA98C1B77B609 /* FSDDropdownPicker-umbrella.h */,
-				19F8F70E458A803F6B191B719A117AB2 /* Info.plist */,
+				0C3B7E8BC26494661E1B848782660ED5 /* FlagKit.modulemap */,
+				281C8FD13A91DBD9C0594DE49657A1B7 /* FlagKit.xcconfig */,
+				B61EA937D5D74B37FF6BDBBDF3AC523A /* FlagKit-dummy.m */,
+				E499D6B107E1DFEDA14918CEF4A0882E /* FlagKit-prefix.pch */,
+				B1296B07A0560296C4372ABEE5E5401E /* FlagKit-umbrella.h */,
+				ACD8C1ABAE4E20E824D35D574D5F59B6 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FSDDropdownPicker";
+			path = "../Target Support Files/FlagKit";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3E2BB0436F6C03C4DBC6367B047F888 /* FlagKit */ = {
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B53E774C7CFF76091165892FB1D24A26 /* FlagKit.h */,
-				95C13FC3C8E47F43A1E2E1D56289C3E3 /* FlagKit.swift */,
-				8C22F22A5A1DA29ACF1D255D6E061A28 /* UIImage.swift */,
-				682D47A0CE4226F96FEC2F43CFF65BAA /* Resources */,
-				63DBFEBA24253C1279FB5F1784BC8CB3 /* Support Files */,
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
-			path = FlagKit;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EFBC876D9CAE0FB1F08934E910DB1AC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30B61644BD3EBA5E2AC9D23585670AF7 /* FlagKit.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F180C8AC4BCA9BEEE3D7C13D014A01F5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				07E30214A1B56E8994BFFE08A6A323E4 /* FSDDropdownPicker.podspec */,
+				98752A046FAAD69589C9D0028F06BF34 /* LICENSE */,
+				352AE913B37DFAB99CFACF227A559CB9 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		36EF5F88F46FE681A73CF97798EB6B27 /* Headers */ = {
+		08B77BA924D21C9F222D67F05ABEAE52 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EC6F59C095A9AA5935108008903B804 /* Pods-FSDDropdownPicker-umbrella.h in Headers */,
+				CCB9BD73F4FB8CDEE7BCA20CE4B9CBE7 /* FlagKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		563A8B7D6294451CDF851926E00EA2EE /* Headers */ = {
+		17D7014EEB897114D92D4D16917B147B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946CAD817B1490FAA8C164FF4D941B4E /* FlagKit-umbrella.h in Headers */,
-				ADEF9313EA8274212B80DB26021C0AB6 /* FlagKit.h in Headers */,
+				89D364E8AA40E41208AD20B3D24B30F6 /* Pods-FSDDropdownPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C49167CB16D2535967D68805AC17208 /* Headers */ = {
+		7FC8F22CEB87BCA3FAE3E4C4D8C4149D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0309BA1322DDAC13D1299A0A0C1D38A0 /* FSDDropdownPicker-umbrella.h in Headers */,
-				2EF5C93B8B2942D19B6C06DEA3E516FE /* FSDDropdownPicker.h in Headers */,
-				5A9590499C4C745475930F5704812660 /* FSDPickerItem.h in Headers */,
-				717DEEBA0C6FDEF5E13E6DDB59076832 /* FSDPickerItemProtocol.h in Headers */,
-				DDDCA79FEBA4F132F4F2EEC5339C9390 /* UINavigationItem+FSDPicker.h in Headers */,
+				A28CB25BE2F9FA750AF8F19EC53C6EF8 /* FSDDropdownPicker-umbrella.h in Headers */,
+				9A5523B8B9DED1CDA2E94F060F00D14D /* FSDDropdownPicker.h in Headers */,
+				8A4C555B5DB41A1A1566C0B23276C7AA /* FSDPickerItem.h in Headers */,
+				11B31EAD249E070A0B2749AF22613D13 /* FSDPickerItemProtocol.h in Headers */,
+				8D2276BCE8FA1B878D629710F9FAAFAB /* UINavigationItem+FSDPicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		58538D686F5ABA6D751FB325AA5C4156 /* FlagKit */ = {
+		33DF14505F36AF9F6FF97063882702E0 /* FlagKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 302CC709ECB2F1D9A2AAE86990AE4FB4 /* Build configuration list for PBXNativeTarget "FlagKit" */;
+			buildConfigurationList = C62AA67FE82F064C08E9D924360BADAE /* Build configuration list for PBXNativeTarget "FlagKit" */;
 			buildPhases = (
-				0266AFA04E9CDA5475B3B84268F76DAD /* Sources */,
-				E0D693041796305C04FBB2F0E25D8CFE /* Frameworks */,
-				563A8B7D6294451CDF851926E00EA2EE /* Headers */,
-				FE9500FAE97D308AEFA66B996AB6AF15 /* Resources */,
+				CECA6982504543F53FEEAD95701310B6 /* Sources */,
+				E4C139631F455E14FBE9358EE0D68FA0 /* Frameworks */,
+				9A6AC8EE6B943A1525D65A6BF50AED49 /* Resources */,
+				08B77BA924D21C9F222D67F05ABEAE52 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -328,32 +331,32 @@
 			productReference = 59CBE675C8F5735422515406EB19EFDE /* FlagKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6943675A08B761880EB2010EB5B613B0 /* Pods-FSDDropdownPicker */ = {
+		7BC1359FFF600EB683CEA2C4C2F1EDB0 /* Pods-FSDDropdownPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C8437C2078D3B82000F7B6BBBC5E230 /* Build configuration list for PBXNativeTarget "Pods-FSDDropdownPicker" */;
+			buildConfigurationList = 023DA69A20E86401D5FFA317BED7F427 /* Build configuration list for PBXNativeTarget "Pods-FSDDropdownPicker" */;
 			buildPhases = (
-				E1DDA53B5EE5F29FEE093840D88C2389 /* Sources */,
-				4B68C5CD0BBCE3449B9463B29B0CD3EE /* Frameworks */,
-				36EF5F88F46FE681A73CF97798EB6B27 /* Headers */,
+				C5E8C2A0D75F1D178AFDF8B8108B2380 /* Sources */,
+				DC2536961B09EF928A1704AC71F32C3A /* Frameworks */,
+				17D7014EEB897114D92D4D16917B147B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6DDF15D3D989CEDB4B9290D8E364BE20 /* PBXTargetDependency */,
-				046C42D7356A2136E3B3AC461EA64EA8 /* PBXTargetDependency */,
+				57D2E1342E7F5449DC544F96593777F0 /* PBXTargetDependency */,
+				008BFD70F7C0972B6FE966EAA4F81DDA /* PBXTargetDependency */,
 			);
 			name = "Pods-FSDDropdownPicker";
 			productName = "Pods-FSDDropdownPicker";
 			productReference = BC37E52882AE18E77FCF51C9BDBF60AD /* Pods_FSDDropdownPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CFAB8B4732F00D595A579A5C98F90C27 /* FSDDropdownPicker */ = {
+		B8B6ED35E66F35790F80868CD3531A1C /* FSDDropdownPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF1620F64D251CC43B9B0EB5C25055B1 /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */;
+			buildConfigurationList = 05EA3CE8D509A0B0112BE89F94367745 /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */;
 			buildPhases = (
-				BB19D6C7962449259826C097CE0585F4 /* Sources */,
-				B23E0FA45C754EFB30E88B0BF6309CD9 /* Frameworks */,
-				8C49167CB16D2535967D68805AC17208 /* Headers */,
+				19011EE1BD5E57EE1967A9573BCC61B2 /* Sources */,
+				87E4B0FD20D42A446BE8A52D451F5F9D /* Frameworks */,
+				7FC8F22CEB87BCA3FAE3E4C4D8C4149D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -370,7 +373,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -385,92 +388,126 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58538D686F5ABA6D751FB325AA5C4156 /* FlagKit */,
-				CFAB8B4732F00D595A579A5C98F90C27 /* FSDDropdownPicker */,
-				6943675A08B761880EB2010EB5B613B0 /* Pods-FSDDropdownPicker */,
+				33DF14505F36AF9F6FF97063882702E0 /* FlagKit */,
+				B8B6ED35E66F35790F80868CD3531A1C /* FSDDropdownPicker */,
+				7BC1359FFF600EB683CEA2C4C2F1EDB0 /* Pods-FSDDropdownPicker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE9500FAE97D308AEFA66B996AB6AF15 /* Resources */ = {
+		9A6AC8EE6B943A1525D65A6BF50AED49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EF133392A3BC735C793EBDBBE46DC9 /* FlagKit.xcassets in Resources */,
+				5ED62FEA192FE805FAAAC6DA21B3C5A4 /* FlagKit.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0266AFA04E9CDA5475B3B84268F76DAD /* Sources */ = {
+		19011EE1BD5E57EE1967A9573BCC61B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC8F06FE8F3683B44CC4F1E3D9B2415 /* FlagKit-dummy.m in Sources */,
-				B9B907FFE7876D97EB2DC6188AFEA2B9 /* FlagKit.swift in Sources */,
-				DCD85F52A526EC5CAC59D07AF765509A /* UIImage.swift in Sources */,
+				8D40718BB2501404255370F041135E3F /* FSDDropdownPicker-dummy.m in Sources */,
+				7196AE5C201CC1896AFD22A92D3BC19C /* FSDDropdownPicker.m in Sources */,
+				DA783D3BFEFCBF977D40977D54C6623D /* FSDPickerItem.m in Sources */,
+				AA0ECDB50010556DB551277D942BAB31 /* UINavigationItem+FSDPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB19D6C7962449259826C097CE0585F4 /* Sources */ = {
+		C5E8C2A0D75F1D178AFDF8B8108B2380 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D469F96989BA6420EF51D57BDD684F /* FSDDropdownPicker-dummy.m in Sources */,
-				2D77B50789539B578801D760C1EE6E50 /* FSDDropdownPicker.m in Sources */,
-				CDA18912596D4436C9CB76D6A2E777C2 /* FSDPickerItem.m in Sources */,
-				F77FA2A5A5FA4D748EA37DFB7BAFF708 /* UINavigationItem+FSDPicker.m in Sources */,
+				61D2BA7D5CC823D8895DA1C261DD85C4 /* Pods-FSDDropdownPicker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1DDA53B5EE5F29FEE093840D88C2389 /* Sources */ = {
+		CECA6982504543F53FEEAD95701310B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759BB8D3E1921E7D70ECDFADF013B045 /* Pods-FSDDropdownPicker-dummy.m in Sources */,
+				91AD01924FF9F6A73ADC33C340AE9169 /* Flag.swift in Sources */,
+				2212097A17C09C4177550A5574BD1D61 /* FlagKit-dummy.m in Sources */,
+				CE038A5EC8BCB8F2233E8CB0938647D4 /* FlagKit.swift in Sources */,
+				6A6D3A2F3310E571BAAFD13E57D28942 /* FlagStyle.swift in Sources */,
+				9C86F0C8765FF944B344A78F54312A7F /* NSImage.swift in Sources */,
+				FA92EBB9D7BDB7746287DB2CE59ECFBE /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		046C42D7356A2136E3B3AC461EA64EA8 /* PBXTargetDependency */ = {
+		008BFD70F7C0972B6FE966EAA4F81DDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FlagKit;
-			target = 58538D686F5ABA6D751FB325AA5C4156 /* FlagKit */;
-			targetProxy = 730A327D3C30C0CC1706CC424565E9FC /* PBXContainerItemProxy */;
+			target = 33DF14505F36AF9F6FF97063882702E0 /* FlagKit */;
+			targetProxy = F8D16E794703C16CEF5EB6EF40F7CD09 /* PBXContainerItemProxy */;
 		};
-		6DDF15D3D989CEDB4B9290D8E364BE20 /* PBXTargetDependency */ = {
+		57D2E1342E7F5449DC544F96593777F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FSDDropdownPicker;
-			target = CFAB8B4732F00D595A579A5C98F90C27 /* FSDDropdownPicker */;
-			targetProxy = C96DB6DE8FF97DE97E38899F997A6E0A /* PBXContainerItemProxy */;
+			target = B8B6ED35E66F35790F80868CD3531A1C /* FSDDropdownPicker */;
+			targetProxy = 60925F22BB7EC0B3F4339157524F488E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		25B9304D4D605BADF0CC022BF8FDEF5E /* Debug */ = {
+		17FF41649DA4CB4881656B73290FC941 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06754ACF5BE9D8AA34F14B43B496DA5F /* Pods-FSDDropdownPicker.debug.xcconfig */;
+			baseConfigurationReference = 281C8FD13A91DBD9C0594DE49657A1B7 /* FlagKit.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlagKit/FlagKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlagKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlagKit/FlagKit.modulemap";
+				PRODUCT_NAME = FlagKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		503A8CDBDE535FB1ED7EBBE731470C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06754ACF5BE9D8AA34F14B43B496DA5F /* Pods-FSDDropdownPicker.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FSDDropdownPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -478,6 +515,7 @@
 				PRODUCT_NAME = Pods_FSDDropdownPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -485,271 +523,282 @@
 			};
 			name = Debug;
 		};
-		3C03B7259858E73187D17195E15129E0 /* Debug */ = {
+		5E815DCB4DCFCBE45BF3668BA77E6734 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122AF6E051FF54F54BDA7BFFEDD9C404 /* FSDDropdownPicker.xcconfig */;
+			baseConfigurationReference = 540D6B33CDCEF7B0CA9FAD598474D542 /* FSDDropdownPicker.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSDDropdownPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = FSDDropdownPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+		63959BBDD783363BC296CC0DF34B69D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8438E12A9F272F35973AFC41BE5B38 /* Pods-FSDDropdownPicker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FSDDropdownPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FSDDropdownPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		61E801050AF0321EC9FADA4D09D21B72 /* Release */ = {
+		95F0F7CB3A3090285DC8FC8C43A8F2CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122AF6E051FF54F54BDA7BFFEDD9C404 /* FSDDropdownPicker.xcconfig */;
+			baseConfigurationReference = 281C8FD13A91DBD9C0594DE49657A1B7 /* FlagKit.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FSDDropdownPicker/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FlagKit/FlagKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlagKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FSDDropdownPicker;
+				MODULEMAP_FILE = "Target Support Files/FlagKit/FlagKit.modulemap";
+				PRODUCT_NAME = FlagKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		929762AC25EC293007B0F7C8623F2BE4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB8438E12A9F272F35973AFC41BE5B38 /* Pods-FSDDropdownPicker.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FSDDropdownPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FSDDropdownPicker/Pods-FSDDropdownPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FSDDropdownPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F4D28C35B3D99B11E56AF65DF49FE2E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540D6B33CDCEF7B0CA9FAD598474D542 /* FSDDropdownPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSDDropdownPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FSDDropdownPicker/FSDDropdownPicker.modulemap";
+				PRODUCT_NAME = FSDDropdownPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D0D887430633A913BCC3E62C3A38A178 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D025F2C979E3D32865F6241F18B6F13F /* FlagKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FlagKit/FlagKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FlagKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FlagKit/FlagKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FlagKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		F385EB20B9601438C51F5D91DFE35E85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D025F2C979E3D32865F6241F18B6F13F /* FlagKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FlagKit/FlagKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FlagKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FlagKit/FlagKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FlagKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		023DA69A20E86401D5FFA317BED7F427 /* Build configuration list for PBXNativeTarget "Pods-FSDDropdownPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503A8CDBDE535FB1ED7EBBE731470C42 /* Debug */,
+				63959BBDD783363BC296CC0DF34B69D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EA3CE8D509A0B0112BE89F94367745 /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E815DCB4DCFCBE45BF3668BA77E6734 /* Debug */,
+				F4D28C35B3D99B11E56AF65DF49FE2E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47BEF9D903506B003EA5C2B249729489 /* Debug */,
-				AAF678CED40D3499169D10F63CA0719E /* Release */,
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		302CC709ECB2F1D9A2AAE86990AE4FB4 /* Build configuration list for PBXNativeTarget "FlagKit" */ = {
+		C62AA67FE82F064C08E9D924360BADAE /* Build configuration list for PBXNativeTarget "FlagKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F385EB20B9601438C51F5D91DFE35E85 /* Debug */,
-				D0D887430633A913BCC3E62C3A38A178 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C8437C2078D3B82000F7B6BBBC5E230 /* Build configuration list for PBXNativeTarget "Pods-FSDDropdownPicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25B9304D4D605BADF0CC022BF8FDEF5E /* Debug */,
-				929762AC25EC293007B0F7C8623F2BE4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF1620F64D251CC43B9B0EB5C25055B1 /* Build configuration list for PBXNativeTarget "FSDDropdownPicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C03B7259858E73187D17195E15129E0 /* Debug */,
-				61E801050AF0321EC9FADA4D09D21B72 /* Release */,
+				95F0F7CB3A3090285DC8FC8C43A8F2CD /* Debug */,
+				17FF41649DA4CB4881656B73290FC941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

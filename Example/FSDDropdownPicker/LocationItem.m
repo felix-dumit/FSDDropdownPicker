@@ -10,4 +10,9 @@
 
 @implementation LocationItem
 
+-(UIImage *)image {
+    return [self.flag imageWithStyle:FKFlagStyleRoundedRect];
+}
+
 @end
+
