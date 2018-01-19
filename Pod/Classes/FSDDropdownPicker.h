@@ -63,7 +63,7 @@
  *
  *  @return FSDDropdownPicker instance
  */
-- (instancetype)initWithOptions:(NSArray *)options;
+- (instancetype)initWithOptions:(NSArray<ItemType> *)options;
 
 /**
  *  Shows the dropdown list

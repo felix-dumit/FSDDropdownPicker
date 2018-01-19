@@ -9,12 +9,15 @@
 
 #import "FSDDropdownPicker.h"
 
+@interface FSDDropDownTableView: UITableView
+@property (strong, nonatomic) NSLayoutConstraint* heightConstraint;
+@end
+
 @interface FSDDropdownPicker () <UITableViewDelegate, UITableViewDataSource>
 
-@property (assign, nonatomic) CGRect originalFrame;
 @property (assign, nonatomic) CGFloat headerHeight;
 @property (strong, nonatomic) NSArray *options;
-@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) FSDDropDownTableView *tableView;
 @property (strong, nonatomic) UIVisualEffectView *bluredEffectView;
 @property (strong, nonatomic) UIView *tapOutView;
 @property (strong, nonatomic) UIButton *actionButton;
@@ -48,11 +51,8 @@
         _isDropped = NO;
         _dropdownBackgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
         self.selectedOption = firstItem;
-        
         self.displaysImageInList = NO;
-        
         self.tapOutView = nil;
-        
         self.rowHeight = 44.0f;
         self.headerHeight = 20.0f;
     }
@@ -77,37 +77,37 @@
     return [UIScreen mainScreen].bounds.size.height;
 }
 
--(CGRect)tableFrame {
-    CGRect navFrame = [self navigationBar].frame;
-    if(CGRectEqualToRect(navFrame, CGRectZero)) {
-        navFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
-    }
-    return CGRectMake(CGRectGetMinX(navFrame), CGRectGetMaxY(navFrame) - self.headerHeight, CGRectGetWidth(navFrame), MIN(self.screenHeight - CGRectGetMaxY(navFrame), self.options.count * self.rowHeight) + self.headerHeight);
-}
-
-- (UITableView *)tableView {
+- (FSDDropDownTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.tableFrame];
+        _tableView = [[FSDDropDownTableView alloc] init];
+        _tableView.accessibilityIdentifier = @"fsd_tableView";
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.allowsSelection = YES;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = self.rowHeight;
         _tableView.backgroundColor = self.dropdownBackgroundColor;
-        _tableView.layer.masksToBounds = NO;
-        _tableView.layer.shadowColor = [UIColor blackColor].CGColor;
-        _tableView.layer.shadowOffset = CGSizeMake(0.0f, 4.0f);
-        _tableView.layer.cornerRadius = 2.0f;
-        _tableView.layer.shadowOpacity = 0.3f;
+        _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+        _tableView.sectionHeaderHeight = self.headerHeight;
+    }
+
+    UINavigationBar* navbar = [self navigationBar];
+
+    if (!_tableView.superview && navbar.superview) {
+        UIView* superview = navbar.superview;
+        [superview insertSubview:_tableView belowSubview:navbar];
         
+        [_tableView.leadingAnchor constraintEqualToAnchor:superview.leadingAnchor].active = YES;
+        [_tableView.trailingAnchor constraintEqualToAnchor:superview.trailingAnchor].active = YES;
+        [_tableView.topAnchor constraintEqualToAnchor:navbar.bottomAnchor constant:-self.headerHeight].active = YES;
+        [self calculateTableViewHeight];
         [self hideDropdownAnimated:NO];
     }
     
-    if (!_tableView.superview) {
-        [[self navigationBar].superview insertSubview:_tableView belowSubview:[self navigationBar]];
-    }
-    
     return _tableView;
+}
+
+-(void) calculateTableViewHeight {
+    _tableView.heightConstraint.constant = self.options.count * self.rowHeight;
+    [_tableView setNeedsLayout];
 }
 
 - (void)buttonTapped:(id)sender {
@@ -117,6 +117,7 @@
 - (void)setRowHeight:(CGFloat)rowHeight {
     _rowHeight = rowHeight;
     _tableView.rowHeight = rowHeight;
+    [self calculateTableViewHeight];
     [_tableView reloadData];
 }
 
@@ -139,10 +140,6 @@
         [self.delegate dropdownPicker:self didDropDown:YES];
     }
     
-    CGRect navFrame = [self navigationBar].frame;
-    BOOL greaterThanScreenSize = self.options.count * self.rowHeight > self.screenHeight - CGRectGetMaxY(navFrame);
-    _tableView.scrollEnabled = greaterThanScreenSize;
-    
     self.tableView.hidden = NO;
     
     if (animated) {
@@ -152,21 +149,17 @@
               initialSpringVelocity:10
                             options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
-                             self.tableView.frame = self.tableFrame;
-                             UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.tableView.bounds];
-                             self.tableView.layer.shadowPath = shadowPath.CGPath;
+                             self.tableView.transform = CGAffineTransformIdentity;
                          }
-         
                          completion: ^(BOOL finished) {
-                             
                              NSIndexPath* ip = [NSIndexPath indexPathForRow:[self.options indexOfObject:self.selectedOption] inSection:0];
                              [self.tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionNone];
                          }];
     } else {
-        self.tableView.frame = self.tableFrame;
+        self.tableView.transform = CGAffineTransformIdentity;
     }
     
-    [self.tableView.superview insertSubview:self.tapOutView belowSubview:self.tableView];
+    [self addTapoutView];
     
     _isDropped = YES;
 }
@@ -176,18 +169,17 @@
         [self.delegate dropdownPicker:self didDropDown:NO];
     }
     
-    
-    CGRect frame = self.tableFrame;
-    frame.origin.y -= CGRectGetHeight(self.tableView.bounds) + 5;
+    CGFloat navHeight = [self navigationBar].bounds.size.height;
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(0, -(_tableView.heightConstraint.constant + self.headerHeight + navHeight));
     
     if (animated) {
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:0.7
                               delay:0
              usingSpringWithDamping:0.8
               initialSpringVelocity:10
                             options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
-                             self.tableView.frame = frame;
+                             self.tableView.transform = transform;
                          }
          
                          completion: ^(BOOL finished) {
@@ -196,12 +188,12 @@
                              }
                          }];
     } else {
-        self.tableView.frame = frame;
+        //        self.tableView.frame = frame;
+        self.tableView.transform = transform;
         self.tableView.hidden = YES;
     }
     
-    [self.tapOutView removeFromSuperview];
-    self.tapOutView = nil;
+    [self removeTapOutView];
     
     _isDropped = NO;
 }
@@ -262,32 +254,76 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedOption = [self.options objectAtIndex:indexPath.row];
+    self.selectedOption = self.options[indexPath.row];
 }
 
 - (void)setSelectedOption:(id <FSDPickerItemProtocol> )selectedOption {
     _selectedOption = selectedOption;
-    [self.actionButton setImage:[_selectedOption image] forState:UIControlStateNormal];
+    [self.actionButton setImage:selectedOption.image forState:UIControlStateNormal];
     
-    if (self.delegate && [self.delegate dropdownPicker:self didSelectOption:_selectedOption]) {
+    if (self.delegate && [self.delegate dropdownPicker:self didSelectOption:selectedOption]) {
         [self hideDropdownAnimated:YES];
     }
 }
 
 #pragma mark - Tapoutview
-- (UIView *)tapOutView {
-    if (!_tapOutView && self.tableView.window) {
-        _tapOutView = [[UIView alloc] initWithFrame:self.tableView.window.rootViewController.view.frame];
-        _tapOutView.backgroundColor = [UIColor clearColor];
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOutTapped:)];
-        [_tapOutView addGestureRecognizer:tap];
+-(void) addTapoutView {
+    if(self.tapOutView && self.tapOutView.superview) {
+        return;
     }
-    
-    return _tapOutView;
+    self.tapOutView = [UIView new];
+    self.tapOutView.accessibilityIdentifier = @"fsd_tapoutView";
+    self.tapOutView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.tapOutView.backgroundColor = [UIColor clearColor];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOutTapped:)];
+    [self.tapOutView addGestureRecognizer:tap];
+    [self.tableView.superview insertSubview:self.tapOutView belowSubview:self.tableView];
+    [self.tapOutView.leadingAnchor constraintEqualToAnchor:self.tableView.leadingAnchor].active = YES;
+    [self.tapOutView.trailingAnchor constraintEqualToAnchor:self.tableView.trailingAnchor].active = YES;
+    [self.tapOutView.topAnchor constraintEqualToAnchor:self.tableView.bottomAnchor].active = YES;
+    [self.tapOutView.bottomAnchor constraintEqualToAnchor:self.tableView.window.bottomAnchor].active = YES;
 }
+
+-(void) removeTapOutView {
+    [self.tapOutView removeFromSuperview];
+    self.tapOutView = nil;
+}
+
 
 - (void)tapOutTapped:(id)sender {
     [self hideDropdownAnimated:YES];
+}
+
+@end
+
+@implementation FSDDropDownTableView
+
+-(instancetype) init {
+    if(self = [super init]) {
+        self.allowsSelection = YES;
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.layer.masksToBounds = NO;
+        self.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.layer.shadowOffset = CGSizeMake(0.0f, 4.0f);
+        self.layer.cornerRadius = 2.0f;
+        self.layer.shadowOpacity = 0.3f;
+        self.heightConstraint = [self.heightAnchor constraintEqualToConstant:0];
+        self.heightConstraint.priority = 999;
+        self.heightConstraint.active = YES;
+        self.clipsToBounds = NO;
+    }
+    return self;
+}
+
+-(void)setTransform:(CGAffineTransform)transform {
+    [super setTransform:transform];
+}
+
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    self.scrollEnabled = self.contentSize.height > self.bounds.size.height + self.sectionHeaderHeight;
+//    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
+//    self.layer.shadowPath = shadowPath.CGPath;
 }
 
 @end
