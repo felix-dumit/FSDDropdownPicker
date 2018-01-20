@@ -14,7 +14,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### Create instance
-You can create an intance directly by passing in an `NSArray` of items that conform to the `FSDPickerItemProtocol`, if you just want an item with a name and image you can use the provided `FSDPickerItem` :
+You can create an intance directly by passing in an `NSArray<id<FSDPickerItemProtocol>>*` , if you just want an item with a name and image you can use the provided `FSDPickerItem` :
 
 ```objc
 FSDPickerItem* item1 = [[FSDPickerItem alloc] initWithName:@"name" andImage:[UIImage imageNamed:@"1"]];
@@ -24,10 +24,10 @@ FSDDropdownPicker *picker = [[FSDDropdownPicker alloc] initWithOptions:@[item1]]
 You will then have to add it to your view manually. You can alternatively use a convenience method to directly add the picker to the right or left of a navigation bar:
 
 ```objc 
-FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3] atPosition:FSDDropdownPickerNavigationPositionRight];;
+FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3] atPosition:FSDDropdownPickerNavigationPositionRight];
 ```
 
-The dropdown picker will dismiss if tapped outside or tapped the dropdown button.
+The dropdown picker will dismiss if you tap the dropdown button again, or if you tap outside the view and you have `shouldHideOnOutsideTap` turned on.
 
 ### FSDDropdownPickerDelegate
 > The delegate can respond to the following events:
