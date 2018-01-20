@@ -52,6 +52,7 @@
         _dropdownBackgroundColor = [UIColor colorWithWhite:1.000 alpha:0.850];
         self.selectedOption = firstItem;
         self.displaysImageInList = NO;
+        self.shouldHideOnOutsideTap = YES;
         self.tapOutView = nil;
         self.rowHeight = 44.0f;
         self.headerHeight = 20.0f;
@@ -160,7 +161,9 @@
         self.tableView.transform = CGAffineTransformIdentity;
     }
     
-    [self addTapoutView];
+    if(self.shouldHideOnOutsideTap) {
+        [self addTapoutView];
+    }
     
     _isDropped = YES;
 }

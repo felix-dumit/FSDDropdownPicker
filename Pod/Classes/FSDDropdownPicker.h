@@ -56,6 +56,12 @@
  */
 @property (strong, nonatomic, readonly) NSArray <ItemType>*options;
 
+
+/**
+ If the dropdown should hide when a tap outside (rest of window) happens. Default= YES;
+ */
+@property (assign, nonatomic) BOOL shouldHideOnOutsideTap;
+
 /**
  *  Initialize a FSDDropdownpicker instance given a list of items to display
  *

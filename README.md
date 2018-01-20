@@ -66,6 +66,11 @@ picker.delegate = self;
  */
 @property (assign, nonatomic) UITableViewCellSeparatorStyle listSeparator;
 
+/**
+*  If the dropdown should hide when a tap outside (rest of window) happens. Default= YES
+*/
+@property (assign, nonatomic) BOOL shouldHideOnOutsideTap;
+
 ```
 ## Installation
 
