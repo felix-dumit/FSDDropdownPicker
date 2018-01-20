@@ -21,10 +21,10 @@ FSDPickerItem* item1 = [[FSDPickerItem alloc] initWithName:@"name" andImage:[UII
 ...    
 FSDDropdownPicker *picker = [[FSDDropdownPicker alloc] initWithOptions:@[item1]];    
 ```
-You will then have to add it to your view manually. You can alternatively use a convenience method to directly add the picker to the right of a navigation bar: 
+You will then have to add it to your view manually. You can alternatively use a convenience method to directly add the picker to the right or left of a navigation bar:
 
 ```objc 
-FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
+FSDDropdownPicker *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3] atPosition:FSDDropdownPickerNavigationPositionRight];;
 ```
 
 The dropdown picker will dismiss if tapped outside or tapped the dropdown button.

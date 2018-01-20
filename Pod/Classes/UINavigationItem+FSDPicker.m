@@ -12,8 +12,18 @@
 @implementation UINavigationItem (FSDPicker)
 
 - (FSDDropdownPicker *)addDropdownPickerWithOptions:(NSArray *)options {
+    return [self addDropdownPickerWithOptions:options atPosition:FSDDropdownPickerNavigationPositionRight];
+}
+
+-(FSDDropdownPicker *)addDropdownPickerWithOptions:(NSArray *)options atPosition:(FSDDropdownPickerNavigationPosition)position {
     FSDDropdownPicker *picker = [[FSDDropdownPicker alloc] initWithOptions:options];
-    self.rightBarButtonItem = picker;
+    switch (position) {
+        case FSDDropdownPickerNavigationPositionLeft:
+            self.leftBarButtonItem = picker;
+            break;
+        case FSDDropdownPickerNavigationPositionRight:
+            self.rightBarButtonItem = picker;
+    }
     return picker;
 }
 

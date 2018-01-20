@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "FSDDropdownPicker.h"
 
+typedef NS_ENUM(NSUInteger, FSDDropdownPickerNavigationPosition) {
+    FSDDropdownPickerNavigationPositionLeft,
+    FSDDropdownPickerNavigationPositionRight,
+};
+
 @interface UINavigationItem (FSDPicker)
 
 /**
@@ -19,5 +24,15 @@
  *  @return FSDDropdown picker instance
  */
 - (FSDDropdownPicker *)addDropdownPickerWithOptions:(NSArray *)options;
+
+
+/**
+ Adds a dropdown picker to the navigation item
+
+ @param options array of options to be displayed
+ @param position position of the bar item in the navigation item. (left of right)
+ @return the picker instance
+ */
+- (FSDDropdownPicker *)addDropdownPickerWithOptions:(NSArray *)options atPosition:(FSDDropdownPickerNavigationPosition)position;
 
 @end

@@ -37,7 +37,8 @@
     item3.flag = [[FKFlag alloc] initWithCountryCode:@"JP"];
     item3.coordinate = CLLocationCoordinate2DMake(35.6833, 139.7667);
     
-    FSDDropdownPicker<LocationItem*> *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]];
+    FSDDropdownPicker<LocationItem*> *picker =  [self.navigationItem addDropdownPickerWithOptions:@[item1, item2, item3]
+                                                                                       atPosition:FSDDropdownPickerNavigationPositionRight];
     picker.delegate = self;
     picker.displaysImageInList = YES;
     
