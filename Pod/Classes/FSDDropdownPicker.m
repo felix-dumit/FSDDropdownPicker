@@ -188,7 +188,7 @@
                          }
          
                          completion: ^(BOOL finished) {
-                             if(!_isDropped) {
+                             if(!self.isDropped) {
                                  self.tableView.hidden = YES;
                              }
                          }];
