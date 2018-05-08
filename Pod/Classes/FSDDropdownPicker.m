@@ -95,6 +95,7 @@
     
     if (!_tableView.superview && navbar.superview) {
         UIView* superview = navbar.superview;
+        superview.clipsToBounds = YES;
         [superview insertSubview:_tableView belowSubview:navbar];
         
         [_tableView.leadingAnchor constraintEqualToAnchor:superview.leadingAnchor].active = YES;
